@@ -1,7 +1,7 @@
 """Phase 3 board setup (idempotent): outline, mounting holes, JLC04161H-7628 stackup, title block,
 design rules, net classes + patterns, track/via/diff-pair presets, custom DRC rules.
 Numbers: docs/BOARD_SETUP.md (impedance from scripts/impedance.py, limits from JLCPCB capabilities)."""
-import json, re
+import json, re, sys
 import pcbnew
 from kisch import ROOT
 
@@ -164,7 +164,7 @@ DRU = """(version 1)
   (condition "A.inDiffPair('*CSI_*')")
   (constraint diff_pair_gap (min 0.12) (opt 0.13) (max 0.14))
   (constraint diff_pair_uncoupled (max 2))
-  (constraint skew (max 0.1)))
+  (constraint skew (max 0.3)))   # 0.3 mm ~ 2 ps: far inside the D-PHY intra-pair budget
 
 (rule "MIPI lane-to-lane matching"
   (condition "A.NetClass == 'MIPI_100R'")
@@ -181,7 +181,9 @@ DRU = """(version 1)
 
 def main():
     board = pcbnew.LoadBoard(str(PCB))
-    outline(board); holes(board); gnd_plane(board); title(board)
+    outline(board); holes(board); title(board)
+    if "--with-gnd-plane" in sys.argv:       # planes are poured by KiCadRoutingTools route_planes (Phase 5)
+        gnd_plane(board)
     board.SetCopperLayerCount(4)
     board.BuildConnectivity(); pcbnew.SaveBoard(str(PCB), board)
     stackup_text(); project_rules()

@@ -20,7 +20,7 @@
   (condition "A.inDiffPair('*CSI_*')")
   (constraint diff_pair_gap (min 0.12) (opt 0.13) (max 0.14))
   (constraint diff_pair_uncoupled (max 2))
-  (constraint skew (max 0.1)))
+  (constraint skew (max 0.3)))   # 0.3 mm ~ 2 ps: far inside the D-PHY intra-pair budget
 
 (rule "MIPI lane-to-lane matching"
   (condition "A.NetClass == 'MIPI_100R'")

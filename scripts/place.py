@@ -17,21 +17,28 @@ ANCHORS = {  # ref: (x, y, rot)   board origin top-left, +y toward the USB (bott
     # front edge: camera FPC (cable exits north), IR LEDs in the corners, PIR, IR-cut connector, IR driver
     "J2": (37.5, 3.6, 180), "D602": (4.5, 3.0, 0), "D603": (10.5, 3.0, 0), "D604": (64.5, 3.0, 0), "D605": (70.5, 3.0, 0),
     "U19": (21.5, 6.6, 0), "J9": (49.5, 4.2, 180), "U12": (57.5, 6.5, 0), "U13": (54.0, 9.5, 0),
+    # MIPI CSI 0R series row in FPC lane order (pad 2 = FPC side on top): CK, D1, D0 - see scripts/route_mipi.py
+    "R318": (38.1, 8.2, 90), "R319": (39.1, 8.2, 90), "R320": (40.3, 8.2, 90), "R321": (41.3, 8.2, 90),
+    "R316": (42.5, 8.2, 90), "R317": (43.5, 8.2, 90),
     # SoC rotated 180 deg: CSI pins face the FPC, flash pins face U2, XTAL/32k/CHIP_PU face the modem side
     "U1": (39.5, 21.0, 180), "U2": (50.0, 17.5, 90), "Y1": (43.0, 29.6, 0), "Y2": (47.5, 25.0, 90),
     "U7": (30.0, 30.5, 0), "U15": (36.5, 29.4, 0),
     # Wi-Fi module top-right, antenna end on the east edge; microSD slot on the west edge
     "U3": (66.3, 20.0, 270), "J3": (9.9, 21.0, 270),
     # modem bottom-right, U.FLs at its antenna pins, LTE switch at its VBAT pins
-    "U4": (53.5, 48.0, 0), "J5": (72.6, 59.0, 0), "J6": (72.6, 40.0, 0), "J7": (47.5, 29.8, 0), "U9": (66.0, 30.6, 0),
+    "U4": (53.5, 48.0, 0), "J5": (72.6, 59.0, 0), "J6": (72.6, 40.0, 0), "J7": (47.5, 29.8, 0), "U9": (41.5, 67.4, 0),
     # service edge (bottom): nano-SIM slot, USB-C; battery on the west edge; buttons by the USB
     "J4": (29.8, 61.3, 0), "U18": (29.8, 51.6, 0), "J1": (16.5, 66.0, 0), "U17": (16.5, 58.5, 0), "D201": (16.5, 55.3, 0),
     "J8": (5.4, 50.0, 90), "SW301": (5.0, 58.0, 0), "SW302": (11.2, 58.0, 0),
     # power block west/centre
     "U5": (15.5, 47.5, 0), "U6": (22.0, 39.0, 0), "U8": (27.0, 36.0, 0), "U14": (5.5, 40.5, 0), "Q201": (10.0, 40.5, 0),
 }
+P4_DECAPS_BOTTOM = True        # Review 3 decision (2026-10-19): SoC 100n/1u caps on B.Cu under their pins
 LOOP_OWNER = {"/camera_ir/IR_SW": "U12", "/mcu/HP_SW": "U7", "/power/CHG_SW": "U5", "/power/BB_LX1": "U6",
               "/power/BB_LX2": "U6", "/power/CHG_BTST": "U5", "/power/CHG_REGN": "U5", "/power/CHG_PMID": "U5"}
+# keep-clear corridors (x0, y0, x1, y1): MIPI lanes between FPC and P4 (top), and the clock pair's B.Cu dip (bottom)
+KEEPOUT_F = [(35.9, 5.45, 44.4, 15.35)]
+KEEPOUT_B = [(36.9, 8.9, 40.2, 14.7)]
 BROAD = {"GND", "3V3", "SYS", "VBAT_LTE", "1V8_IO6", "BAT", "VBUS"}   # rails too wide to imply a location
 SHEET_OWNER = {("mcu.kicad_sch", "3V3"): "U1", ("mcu.kicad_sch", "1V8_IO6"): "U1", ("wifi.kicad_sch", "3V3"): "U3",
                ("lte.kicad_sch", "3V3"): "U16", ("lte.kicad_sch", "1V8_IO6"): "U16", ("lte.kicad_sch", "SYS"): "U9",
@@ -76,6 +83,9 @@ class Placer:
     def free(self, r, rects=None):
         rects = self.rects if rects is None else rects
         x0, y0, x1, y1 = r
+        for (a0, b0, a1, b1) in (KEEPOUT_B if rects is self.brects else KEEPOUT_F):
+            if x0 < a1 and a0 < x1 and y0 < b1 and b0 < y1:
+                return False
         if x0 < MARGIN or y0 < MARGIN or x1 > W - MARGIN or y1 > H - MARGIN:
             return False
         for (a0, b0, a1, b1) in rects:
@@ -154,7 +164,7 @@ class Placer:
 
     def bottom_decap(self, fp):
         """--p4-decaps-bottom: SoC 100n/1u caps go on B.Cu right under the supply pin they serve."""
-        if "--p4-decaps-bottom" not in sys.argv or fp.GetSheetfile() != "mcu.kicad_sch" or not fp.GetReference().startswith("C"):
+        if not P4_DECAPS_BOTTOM or fp.GetSheetfile() != "mcu.kicad_sch" or not fp.GetReference().startswith("C"):
             return False
         nets = {p.GetNetname() for p in fp.Pads()}
         if "GND" not in nets or fp.GetValue().startswith(("10u", "22u", "4.7u", "22p", "18p")):
