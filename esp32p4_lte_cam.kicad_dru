@@ -1,0 +1,34 @@
+(version 1)
+# Custom DRC rules - ESP32-P4 LTE camera (JLC 4-layer, Standard PCBA)
+
+(rule "P4 0.35 mm QFN fan-out"
+  (condition "A.intersectsCourtyard('U1')")
+  (constraint clearance (min 0.09))
+  (constraint track_width (min 0.09)))
+
+(rule "RF CPWG ground gap"
+  (condition "A.NetClass == 'RF_50R' && B.Type != 'Pad'")
+  (constraint clearance (min 0.2)))
+
+(rule "USB diff pair"
+  (condition "A.inDiffPair('*USB_D*')")
+  (constraint diff_pair_gap (min 0.12) (opt 0.13) (max 0.14))
+  (constraint diff_pair_uncoupled (max 3))
+  (constraint skew (max 0.15)))
+
+(rule "MIPI CSI diff pairs"
+  (condition "A.inDiffPair('*CSI_*')")
+  (constraint diff_pair_gap (min 0.12) (opt 0.13) (max 0.14))
+  (constraint diff_pair_uncoupled (max 2))
+  (constraint skew (max 0.1)))
+
+(rule "MIPI lane-to-lane matching"
+  (condition "A.NetClass == 'MIPI_100R'")
+  (constraint length (max 40)))
+
+(rule "High-current via size"
+  (condition "A.Type == 'Via' && A.NetClass == 'HighCurrent'")
+  (constraint hole_size (min 0.3)))
+
+(rule "Board edge copper"
+  (constraint edge_clearance (min 0.3)))

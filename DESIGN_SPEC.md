@@ -70,7 +70,7 @@ ESP32-P4 ──SDIO──► ESP32-C6-MINI-1
 | L3 In2 | Power pours (SYS, 3V3, VBAT_LTE) + low-speed signals |
 | L4 B.Cu | Signals, secondary components, GND fill |
 
-Impedance targets (use JLC's calculator for final widths): MIPI CSI & USB **90 Ω differential**, RF feeds **50 Ω CPWG** (L1 over L2). Minimum rules: JLC 4-layer standard (0.09/0.09 mm trace/space, 0.2 mm via / 0.45 mm pad). Prefer 0.127 mm or wider where space allows.
+Impedance targets: MIPI CSI **100 Ω differential** (D-PHY), USB **90 Ω differential**, RF feeds **50 Ω CPWG** (L1 over L2). Final geometry and rules are in [docs/BOARD_SETUP.md](docs/BOARD_SETUP.md).
 
 ## 6. Phased plan with review gates
 

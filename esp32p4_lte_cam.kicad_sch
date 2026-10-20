@@ -28,7 +28,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "3667d719-a343-5fe9-92b5-0c0cd4970120")
-		(property "Sheetname" "Power - USB-C, charger, battery protection, 3V3 / 1V8 rails"
+		(property "Sheetname" "power"
 			(at 20 39.3 0)
 			(effects
 				(font
@@ -54,6 +54,17 @@
 			)
 		)
 	)
+	(text "Power - USB-C, charger, battery protection, 3V3 / 1V8 rails"
+		(exclude_from_sim no)
+		(at 22 46 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "2dc72267-3453-523d-946d-008a4a54abf8")
+	)
 	(sheet
 		(at 110 40)
 		(size 70 30)
@@ -70,7 +81,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "b1c72746-ff8d-5e2e-9498-b2730c48500d")
-		(property "Sheetname" "ESP32-P4 core - SoC, flash, clocks, core DC-DC, reset/boot"
+		(property "Sheetname" "mcu"
 			(at 110 39.3 0)
 			(effects
 				(font
@@ -96,6 +107,17 @@
 			)
 		)
 	)
+	(text "ESP32-P4 core - SoC, flash, clocks, core DC-DC, reset/boot"
+		(exclude_from_sim no)
+		(at 112 46 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "d526f9ca-8c6d-5fd0-aecf-30a667fd8814")
+	)
 	(sheet
 		(at 200 40)
 		(size 70 30)
@@ -112,7 +134,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "191e97ec-b85b-5442-bee9-08b1e68ccb59")
-		(property "Sheetname" "Wi-Fi 6 / BLE - ESP32-C6-MINI-1 over SDIO (esp-hosted)"
+		(property "Sheetname" "wifi"
 			(at 200 39.3 0)
 			(effects
 				(font
@@ -138,6 +160,17 @@
 			)
 		)
 	)
+	(text "Wi-Fi 6 / BLE - ESP32-C6-MINI-1 over SDIO (esp-hosted)"
+		(exclude_from_sim no)
+		(at 202 46 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "51ab642f-f0bb-5710-8ab7-e191c9813db1")
+	)
 	(sheet
 		(at 20 95)
 		(size 70 30)
@@ -154,7 +187,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "52ea3dcd-9560-536c-a720-c41eb5ca948c")
-		(property "Sheetname" "LTE Cat-4 + GNSS - SIM7600G-H, nano-SIM, antennas"
+		(property "Sheetname" "lte"
 			(at 20 94.3 0)
 			(effects
 				(font
@@ -180,6 +213,17 @@
 			)
 		)
 	)
+	(text "LTE Cat-4 + GNSS - SIM7600G-H, nano-SIM, antennas"
+		(exclude_from_sim no)
+		(at 22 101 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4c14167-607e-5b1a-9582-e23a0e66b991")
+	)
 	(sheet
 		(at 110 95)
 		(size 70 30)
@@ -196,7 +240,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "8e2e7b51-b161-5917-99d0-4e9886dd298d")
-		(property "Sheetname" "Camera (MIPI CSI-2, 2 lanes), IR illumination, IR-cut filter, PIR"
+		(property "Sheetname" "camera_ir"
 			(at 110 94.3 0)
 			(effects
 				(font
@@ -222,6 +266,17 @@
 			)
 		)
 	)
+	(text "Camera (MIPI CSI-2, 2 lanes), IR illumination, IR-cut filter, PIR"
+		(exclude_from_sim no)
+		(at 112 101 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a23962b-c6ea-59df-b31a-b5b193120ca5")
+	)
 	(sheet
 		(at 200 95)
 		(size 70 30)
@@ -238,7 +293,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "aeac851f-4be6-5b6d-9fc3-cafade5f0e4c")
-		(property "Sheetname" "microSD (SDMMC slot 0, 4-bit, 3.3 V) with power switch"
+		(property "Sheetname" "storage"
 			(at 200 94.3 0)
 			(effects
 				(font
@@ -263,6 +318,17 @@
 				)
 			)
 		)
+	)
+	(text "microSD (SDMMC slot 0, 4-bit, 3.3 V) with power switch"
+		(exclude_from_sim no)
+		(at 202 101 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "942eafa6-615f-5fe6-af0e-568fb9b61913")
 	)
 	(text "ESP32-P4 LTE Camera Board - rev A"
 		(exclude_from_sim no)

@@ -1,19 +1,19 @@
-ERC report (2026-10-19T21:51:42, Encoding UTF8)
+ERC report (2026-10-19T22:01:54, Encoding UTF8)
 Report includes: Errors, Warnings, Exclusions
 
 ***** Sheet /
 
-***** Sheet /Power - USB-C, charger, battery protection, 3V3 / 1V8 rails/
+***** Sheet /power/
 
-***** Sheet /ESP32-P4 core - SoC, flash, clocks, core DC-DC, reset/boot/
+***** Sheet /mcu/
 
-***** Sheet /Wi-Fi 6 / BLE - ESP32-C6-MINI-1 over SDIO (esp-hosted)/
+***** Sheet /wifi/
 
-***** Sheet /LTE Cat-4 + GNSS - SIM7600G-H, nano-SIM, antennas/
+***** Sheet /lte/
 
-***** Sheet /Camera (MIPI CSI-2, 2 lanes), IR illumination, IR-cut filter, PIR/
+***** Sheet /camera_ir/
 
-***** Sheet /microSD (SDMMC slot 0, 4-bit, 3.3 V) with power switch/
+***** Sheet /storage/
 
  ** ERC messages: 0  Errors 0  Warnings 0
 

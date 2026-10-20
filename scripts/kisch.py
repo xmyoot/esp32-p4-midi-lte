@@ -351,9 +351,10 @@ class Design:
                         ["on_board", "yes"], ["dnp", "no"], ["fields_autoplaced", "yes"],
                         ["stroke", ["width", 0.1524], ["type", "solid"]], ["fill", ["color", 0, 0, 0, 0.0]],
                         ["uuid", Q(su)],
-                        _prop("Sheetname", s.title, x, y - 0.7, size=1.8, justify=("left", "bottom")),
+                        _prop("Sheetname", s.name, x, y - 0.7, size=1.8, justify=("left", "bottom")),
                         _prop("Sheetfile", f"{s.name}.kicad_sch", x, y + h + 0.6, justify=("left", "top")),
                         ["instances", ["project", Q(PROJECT), ["path", Q(f"/{self.root_uuid}"), ["page", Q(str(s.page))]]]]])
+            doc.append(_text(s.title, x + 2, y + 6))
         y0 = 40 + ((len(self.sheets) - 1) // cols + 1) * (h + 25)
         for j, line in enumerate(self._index_notes()):
             doc.append(_text(line, 20, y0 + j * 4.5))

@@ -52,3 +52,24 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def fix_footprints():
+    """EasyEDA imports model plastic locating pegs as zero-annular PTH pads -> make them NPTH.
+    TO-5 PIR courtyard imports self-intersecting -> replace with a clean circle (body dia 9.2 + 0.25)."""
+    import re as _re
+    pretty = LOCAL_LIBS["lcsc"].with_suffix(".pretty")
+    peg = _re.compile(r'\(pad "" thru_hole (circle|oval) (\(at [^)]*\)) \(size ([\d.]+) ([\d.]+)\) \(drill ([\d.]+)\)')
+    for f in sorted(pretty.glob("*.kicad_mod")):
+        t = f.read_text(encoding="utf-8"); n0 = t
+        t = peg.sub(lambda m: m.group(0).replace("thru_hole", "np_thru_hole")
+                    if abs(float(m.group(3)) - float(m.group(5))) < 0.02 else m.group(0), t)
+        if f.name.startswith("TO-5-3"):
+            t = "\n".join(l for l in t.splitlines() if "F.CrtYd" not in l)
+            t = t.rstrip().rstrip(")") + "\n\t(fp_circle (center 0 -1.27) (end 4.85 -1.27) (layer F.CrtYd) (width 0.05))\n)\n"
+        if t != n0:
+            f.write_text(t, encoding="utf-8"); print("fixed footprint", f.name)
+
+
+if __name__ == "__main__":
+    fix_footprints()
