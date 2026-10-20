@@ -31,14 +31,17 @@ ANCHORS = {  # ref: (x, y, rot)   board origin top-left, +y toward the USB (bott
     "J4": (29.8, 61.3, 0), "U18": (29.8, 51.6, 0), "J1": (16.5, 66.0, 0), "U17": (16.5, 58.5, 0), "D201": (16.5, 55.3, 0),
     "J8": (5.4, 50.0, 90), "SW301": (5.0, 58.0, 0), "SW302": (11.2, 58.0, 0),
     # power block west/centre
+    # USB 22R series pair on B.Cu, ~5 mm from the P4 USB pins (52 DN / 53 DP); fed by two vias in the corridor
+    # north of the USB corner (KEEPOUT_F/B below), then B.Cu toward J1.  4th field = side.
+    "R315": (29.9, 13.45, 180, "B"), "R314": (29.9, 14.55, 180, "B"),
     "U5": (15.5, 47.5, 0), "U6": (22.0, 39.0, 0), "U8": (27.0, 36.0, 0), "U14": (5.5, 40.5, 0), "Q201": (10.0, 40.5, 0),
 }
 P4_DECAPS_BOTTOM = True        # Review 3 decision (2026-10-19): SoC 100n/1u caps on B.Cu under their pins
 LOOP_OWNER = {"/camera_ir/IR_SW": "U12", "/mcu/HP_SW": "U7", "/power/CHG_SW": "U5", "/power/BB_LX1": "U6",
               "/power/BB_LX2": "U6", "/power/CHG_BTST": "U5", "/power/CHG_REGN": "U5", "/power/CHG_PMID": "U5"}
 # keep-clear corridors (x0, y0, x1, y1): MIPI lanes between FPC and P4 (top), and the clock pair's B.Cu dip (bottom)
-KEEPOUT_F = [(35.9, 5.45, 44.4, 15.35)]
-KEEPOUT_B = [(36.9, 8.9, 40.2, 14.7)]
+KEEPOUT_F = [(35.9, 5.45, 44.4, 15.35), (33.5, 12.8, 35.9, 15.35)]   # CSI fan-in; USB escape vias
+KEEPOUT_B = [(36.9, 8.9, 40.2, 14.7), (30.8, 12.7, 36.9, 15.35)]     # CSI clock crossover; USB B.Cu corridor
 BROAD = {"GND", "3V3", "SYS", "VBAT_LTE", "1V8_IO6", "BAT", "VBUS"}   # rails too wide to imply a location
 SHEET_OWNER = {("mcu.kicad_sch", "3V3"): "U1", ("mcu.kicad_sch", "1V8_IO6"): "U1", ("wifi.kicad_sch", "3V3"): "U3",
                ("lte.kicad_sch", "3V3"): "U16", ("lte.kicad_sch", "1V8_IO6"): "U16", ("lte.kicad_sch", "SYS"): "U9",
@@ -98,9 +101,14 @@ class Placer:
         return True
 
     def place_anchors(self):
-        for ref, (x, y, rot) in ANCHORS.items():
-            fp = self.fps[ref]; self.set_pose(fp, x, y, rot)
+        for ref, (x, y, rot, *side) in ANCHORS.items():
+            fp = self.fps[ref]; bottom = side == ["B"]
+            if bottom != fp.IsFlipped():
+                fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
+            self.set_pose(fp, x, y, rot)
             r = self.crt(fp)
+            if bottom:
+                self.brects.append(r); continue
             for other, (a0, b0, a1, b1) in zip(self.anchor_refs, self.rects):
                 if r[0] < a1 and a0 < r[2] and r[1] < b1 and b0 < r[3]:
                     print(f"!! anchor {ref} overlaps {other}: dx={min(r[2], a1) - max(r[0], a0):.2f} dy={min(r[3], b1) - max(r[1], b0):.2f}")
