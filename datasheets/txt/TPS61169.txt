@@ -1,0 +1,1051 @@
+Product                                                              Sample &  Technical                      Tools &     Support &
+Folder                                                               Buy       Documents                      Software    Community
+
+                                                                                                                                                   TPS61169
+
+                                                                                                                                      ZHCSD24 - OCTOBER 2014
+
+TPS61169  PWM  38V 
+               WLED 
+
+1                                                                                       3 
+
+1· 2.7V  5.5V                                                                           TPS61169  40V
+·  40V1.8A                                                                               (FET) LED  
+                                                                                         40V1.8A 
+    (MOSFET)                                                                             (MOSFET) 1.2A
+·  38V  LED                                                                              LED  LED
+· 1.2A                                                                                    LED  RSET
+· 1.2MHz                                                                                 204mV 
+· 204mV                                                                                  LED  CTRL 
+·                                                                                        (PWM) 
+· PWM                                                                                    TPS61169  LED 
+· LED                                                                                    
+·                                                                                        LED 
+·                                                                                       LED  TPS61169
+·                                                                                        IC 
+·  90%
+
+2                                                                                       TPS61169  5  SC70 
+
+·                                                                                                                              (1)    
+·                                                                                       TPS61169                                      2.00mm × 1.25mm
+· PDAGPS                                                                                                                            
+·                                                                                                                         SOT (5)
+·  LED 
+                                                                                        (1) 
+
+4                                                                                    L                           D
+
+                                                          VBAT
+
+                                                                CIN                  TPS61169                       COUT
+
+                                                                               VIN
+                                                                                                          SW
+
+PWM DIMMING                                                                    CTRL            FB
+   CONTROL                                                                     GND                         RSET
+
+1
+
+         PRODUCTION DATA information is current as of publication date. Products conform to specifications per the terms of the Texas
+         Instruments standard warranty. Production processing does not necessarily include testing of all parameters.
+
+                                                                                                                                                                                                                     English Data Sheet: SNVSA40
+TPS61169                                                                                                www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+                                                                                              
+
+   1 .......................................................................... 1                      8.3 Feature Description .................................................. 8
+   2 .......................................................................... 1                      8.4 Device Functional Modes........................................ 10
+   3 .......................................................................... 1               9 Application and Implementation ........................ 11
+   4 ........................................................ 1                                        9.1 Application Information............................................ 11
+   5  ........................................................... 2                                    9.2 Typical Application .................................................. 11
+   6 Pin Configuration and Functions ......................... 3                                       9.3 TPS61169 Application Curves ................................ 13
+   7 Specifications......................................................... 4                  10 Power Supply Recommendations ..................... 16
+                                                                                                11 Layout................................................................... 16
+          7.1 Absolute Maximum Ratings ...................................... 4                        11.1 Layout Guidelines ................................................. 16
+          7.2 Handling Ratings ...................................................... 4                11.2 Layout Example .................................................... 16
+          7.3 Recommended Operating Conditions....................... 4                         12  ..................................................... 17
+          7.4 Thermal Information .................................................. 5                 12.1 .............................................. 17
+          7.5 Electrical Characteristics........................................... 5                  12.2  ....................................................................... 17
+          7.6 Typical Characteristics .............................................. 6                 12.3 ......................................................... 17
+   8 Detailed Description .............................................. 7                             12.4  ................................................................... 17
+          8.1 Overview ................................................................... 7    13  .......................................... 17
+          8.2 Functional Block Diagram ......................................... 8
+
+5                                                                                                     
+                                      *                                                         
+                            
+                      2014  10 
+
+2                                                                                               Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                                                                                 TPS61169
+
+6 Pin Configuration and Functions                                                                                ZHCSD24 - OCTOBER 2014
+
+                                                                                SC70 (DCK) Package
+                                                                                          5 Pins
+
+                                                                                       (Top View)
+
+                                                  SW 1                      5 VIN
+
+                                                  GND 2
+
+                                                  FB 3                      4 CTRL
+
+                                                          Pin Functions
+
+      PIN       I/O                                                                                 DESCRIPTION
+
+NAME       NO.
+
+SW         1    I                                 Drain connection of the internal power FET.
+
+GND        2    O                                 Ground
+
+FB         3    I                                 Feedback pin for current. Connect the sense resistor from FB to GND.
+
+CTRL       4    I                                 PWM dimming signal input
+
+VIN        5    I                                 Supply input pin
+
+Copyright © 2014, Texas Instruments Incorporated                                                                        3
+TPS61169                                                                                                              www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+7 Specifications
+
+7.1 Absolute Maximum Ratings
+
+over operating free-air temperature range (unless otherwise noted) (1)
+
+                                                                                               MIN       MAX          UNIT
+                                                                                                                        V
+Voltage (2)             VIN, CTRL, PWM, FB                                                     -0.3      7
+PD                      SW                                                                                             °C
+TJ                      Continuous power dissipation                                           -0.3      40
+
+                        Operating junction temperature                       See Thermal Information
+                                                                                         Table
+
+                                                                                               -40       150
+
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+      only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+      Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+
+(2) All voltage values are with respect to network ground terminal.
+
+7.2 Handling Ratings
+
+Tstg         Storage temperature range                                                          MIN             MAX   UNIT
+V(ESD)                                                                                          -65             150    °C
+             Electrostatic discharge  Human body model (HBM), per ANSI/ESDA/JEDEC JS-001, all  -2000            2000
+                                      pins (1)                                                                          V
+                                      Charged device model (CDM), per JEDEC specification      -500             500
+                                      JESD22-C101, all pins(2)
+
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+
+7.3 Recommended Operating Conditions
+
+                                                                        MIN                         NOM         MAX UNIT
+
+VIN          Input voltage                                              2.7                                     5.5   V
+VOUT         Output voltage
+L            Inductor                                                   VIN                                     38    V
+CI           Input capacitor
+CO           Output capacitor                                           4.7                                     10    µH
+FPWM         PWM dimming signal frequency
+DPWM         PWM dimming signal duty cycle                              1                                             µF
+TJ           Operating junction temperature
+                                                                        1                                       10    µF
+
+                                                                        5                                       100   kHz
+
+                                                                        1%                                      100%
+
+                                                                        -40                                     125   °C
+
+4                                                                       Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                                                                        TPS61169
+
+                                                                                                        ZHCSD24 - OCTOBER 2014
+
+7.4 Thermal Information
+
+                                       THERMAL METRIC(1)                                          TPS61169         UNIT
+                                                                                                     DCK           °C/W
+RJA            Junction-to-ambient thermal resistance(2)
+RJC(top)       Junction-to-case (top) thermal resistance(3)                                        (5 PINS)
+RJB            Junction-to-board thermal resistance(4)                                               263.8
+JT             Junction-to-top characterization parameter(5)                                          76.1
+JB             Junction-to-board characterization parameter(6)                                        51.4
+                                                                                                       1.1
+                                                                                                      50.7
+
+(1) For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, SPRA953.
+
+(2) The junction-to-ambient thermal resistance under natural convection is obtained in a simulation on a JEDEC-standard, high-K board, as
+
+      specified in JESD51-7, in an environment described in JESD51-2a.
+
+(3) The junction-to-case (top) thermal resistance is obtained by simulating a cold plate test on the package top. No specific JEDEC-
+
+      standard test exists, but a close description can be found in the ANSI SEMI standard G30-88.
+
+(4) The junction-to-board thermal resistance is obtained by simulating in an environment with a ring cold plate fixture to control the PCB
+
+      temperature, as described in JESD51-8.
+
+(5) The junction-to-top characterization parameter, JT, estimates the junction temperature of a device in a real system and is extracted
+      from the simulation data for obtaining R JA, using a procedure described in JESD51-2a (sections 6 and 7).
+
+(6) The junction-to-board characterization parameter, JB, estimates the junction temperature of a device in a real system and is extracted
+      from the simulation data for obtaining RJA , using a procedure described in JESD51-2a (sections 6 and 7).
+
+7.5 Electrical Characteristics
+
+Over operating free-air temperature range, VIN = 3.6 V, CTRL = VIN (unless otherwise specified).
+
+                 PARAMETER                        TEST CONDITIONS              MIN                TYP        MAX UNIT
+
+POWER SUPPLY
+
+VIN         Input voltage range                                                2.7                           5.5   V
+
+VVIN_UVLO Undervoltage lockout threshold          VIN falling                                     2          2.3   V
+
+                                                  VIN rising                                                 2.6
+
+VVIN_HYS    VIN UVLO hysteresis                                                                   200              mV
+
+IQ_VIN      Operating quiescent current into Device enable, switching 1.2 MHz                     0.3        0.45  mA
+
+            VIN                                   and no load,
+
+ISD         Shutdown current                      CTRL = GND                                      1          2     µA
+
+CONTROL LOGIC AND TIMING
+
+VH          CTRL Logic high voltage                                            1.2                                 V
+
+VL          CTRL Logic Low voltage                                                                           0.4   V
+
+RPD         CTRL pin internal pull-down                                                           300              K
+
+            resistor
+
+tSD         CTRL logic low time to shutdown CTRL high to low                   2.5                                 ms
+
+VOLTAGE AND CURRENT REGULATION
+
+VREF        Voltage feedback regulation           Duty = 100%, TA  25ºC        188                204        220   mV
+            voltage
+
+IFB         FB pin bias current                   VFB = 204 mV                                               2.5   µA
+
+tREF        VREF filter time constant                                                             1                ms
+
+POWER SWITCH
+
+RDS(ON)     N-channel MOSFET on-resistance                                                        0.35       0.7   
+
+ILN_NFET    N-channel leakage current             VSW = 35 V                                                 1     µA
+
+SWITCHING FREQUENCY
+
+fSW         Switching frequency                   VIN = 3 V                    0.75               1.2        1.5 MHz
+
+PROTECTION AND SOFT START
+
+ILIM        Switching MOSFET current limit D = DMAX , TA  85ºC                 1.2                1.8        2.4
+                                                                                                                          A
+ILIM_Start  Switching MOSFET start-up             TA  85ºC                                        0.72
+            current limit                                                                                                ms
+
+tHalf_LIM   Time step for half current limit                                                      6.5
+
+Copyright © 2014, Texas Instruments Incorporated                                                                             5
+TPS61169                                                                                                                                                                 www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+Electrical Characteristics (continued)
+
+Over operating free-air temperature range, VIN = 3.6 V, CTRL = VIN (unless otherwise specified).
+
+              PARAMETER                         TEST CONDITIONS                                                                                      MIN  TYP            MAX    UNIT
+                                                                                                                                                                            39    V
+VOVP_SW       Output voltage overvoltage                                                                                                             36   37.5
+              threshold
+
+THERMAL SHUTDOWN
+
+Tshutdown     Thermal shutdown threshold                                                                                                                  160                   °C
+                                                                                                                                                                                °C
+Thys          Thermal shutdown hysteresis                                                                                                                 15
+
+7.6 Typical Characteristics
+
+At TA = 25°C, unless otherwise noted.
+
+      250                                                                                                                            1.8
+                                                                                                                                     1.6
+      200                                                                                                                            1.4
+                                                                                                                                     1.2
+   VFB-FB Voltage (mV)150
+                                                                                                                  Current Limit (A)    1
+      100                                                                                                                            0.8
+                                                                                                                                     0.6
+      50                                                                                                                             0.4
+
+           0                                                                                                                            -60 -40 -20
+
+              0 10 20 30 40 50 60 70 80 90 100                                                                                                       0 20 40 60          80 100 120
+                                                                                                                                                       Temperature (°C)
+                        Dimming Duty Cycle (%)            D001                                                                                                                                    D002
+
+              Figure 1. FB Voltage vs Dimming Duty Cycle                                                                             Figure 2. Current Limit vs Temperature
+
+6                                                                                                                                                    Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                  TPS61169
+
+8 Detailed Description                            ZHCSD24 - OCTOBER 2014
+
+8.1 Overview
+
+The TPS61169 is a high-efficiency, high-output voltage boost converter in small package size. The device
+integrates 40-V/1.8-A switch FET and is designed for output voltage up to 39 V with a switch peak current limit of
+1.2 A minimum. Its large driving capability can drive single or parallel LED strings for small to large size panel
+backlighting.
+
+The TPS61169 operates in a current mode scheme with quasi-constant frequency. It is internally compensated
+for maximum flexibility and stability. The switching frequency is 1.2 MHz, and the minimum input voltage is 2.7 V.
+During the on-time, the current rises into the inductor. When the current reaches a threshold value set by the
+internal GM amplifier, the power switch MOSFET is turned off. The polarity of the inductor changes and forward
+biases the schottky diode which lets the current flow towards the output of the boost converter. The off-time is
+fixed for a certain VIN and VOUT, and therefore maintains the same frequency when varying these parameters.
+
+However, for different output loads, the frequency slightly changes due to the voltage drop across the RDS(ON)
+of the power switch MOSFET, this has an effect on the voltage across the inductor and thus on tON (tOFF remains
+fixed). The fixed off-time maintains a quasi-fixed frequency that provides better stability for the system over a
+wider range of input and output voltages than conventional boost converters. The TPS61169 topology has also
+the benefits of providing very good load and line regulations, and excellent line and load transient responses.
+
+The feedback loop regulates the FB pin to a low reference voltage (204 mV typical), reducing the power
+dissipation in the current sense resistor.
+
+Copyright © 2014, Texas Instruments Incorporated  7
+TPS61169                                                                                                                                 www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014                                                       L                   D
+
+8.2 Functional Block Diagram                                                                        VOUT
+
+             VBAT                                                                                                                  COUT
+                                                             CIN                                 SW
+
+                                      VIN                                       OVP
+
+                                 UVLO
+
+         Current Limit and                                           TOFF
+              Soft Start                                          Generator
+
+                           Ton
+
+                                                                     PWM         Gate Driver of
+                                                                  Generator     Power MOSFET
+
+                                                                  GM Amplifier                      FB
+                                                                                                                          RSET
+                                                                                VREF
+
+   CTRL                         PWM Dimming
+                              Reference Control
+
+         Shutdown
+
+                                                                                              GND
+
+8.3 Feature Description
+
+8.3.1 Soft Start-Up
+
+Soft-start circuitry is integrated into the IC to avoid high inrush current spike during start-up. After the device is
+enabled, the GM amplifier output voltage ramps up very slowly, which ensures that the output voltage rises
+slowly to reduce the input current. During this period, the switch current limit is set to 0.72 A. After around 6.5
+ms, the switch current limit changes back to ILIM, and the FB pin voltage ramps up to the reference voltage
+slowly. These features ensure the smooth start-up and minimize the inrush current. See Figure 12 for a typical
+example.
+
+8.3.2 Open LED Protection
+
+Open LED protection circuitry prevents IC damage as the result of white LED disconnection. The TPS61169
+monitors the voltage at the SW pin and FB pin during each switching cycle. The circuitry turns off the switch FET
+and shuts down the IC when both of the following conditions persist for 3 switching cycles: (1) the SW voltage
+exceeds the VOVP threshold, and (2) the FB voltage is less than 30 mV. As the result, the output voltage falls to
+the level of the input supply. The device remains in shutdown mode until it is enabled by toggling the CTRL pin.
+
+8                                                                                                Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                  TPS61169
+
+                                                  ZHCSD24 - OCTOBER 2014
+
+Feature Description (continued)
+
+8.3.3 Shutdown
+
+The TPS61169 enters shutdown mode when the CTRL voltage is logic low for more than 2.5 ms. During
+shutdown, the input supply current for the device is less than 2 A (max). Although the internal switch FET does
+not switch in shutdown, there is still a DC current path between the input and the LEDs through the inductor and
+Schottky diode. The minimum forward voltage of the LED array must exceed the maximum input voltage to
+ensure that the LEDs remain off in shutdown.
+
+8.3.4 Current Program
+
+The FB voltage is regulated by a low 204-mV reference voltage. The LED current is programmed externally using
+a current-sense resistor in series with the LED string(s). The value of the RSET is calculated using:
+
+      ILED  VFB
+               RSET
+
+where
+
+· ILED = total output current of LED string(s)
+
+· VFB = regulated voltage of FB pin
+
+· RSET = current sense resistor                                                                         (1)
+
+The output current tolerance depends on the FB accuracy and the current sensor resistor accuracy.
+
+8.3.5 LED Brightness Dimming
+
+The TPS61169 receives PWM dimming signal at CTRL pin to control the total output current. When the CTRL
+pin is constantly high, the FB voltage is regulated to 204 mV typically. When the duty cycle of the input PWM
+signal is low, the regulation voltage at FB pin is reduced, and the total output current is reduced; therefore, it
+achieves LED brightness dimming. The relationship between the duty cycle and FB regulation voltage is given
+by:
+
+       VFB  Duty K 204 mV
+
+where
+
+· Duty = Duty cycle of the PWM signal
+
+· 204 mV = internal reference voltage                                                                   (2)
+
+Thus, the user can easily control the WLED brightness by controlling the duty cycle of the PWM signal.
+
+As shown in Figure 3, the IC chops up the internal 204-mV reference voltage at the duty cycle of the PWM
+signal. The pulse signal is then filtered by an internal low-pass filter. The output of the filter is connected to the
+GM amplifier as the reference voltage for the FB pin regulation. Therefore, although a PWM signal is used for
+brightness dimming, only the WLED DC current is modulated, which is often referred as analog dimming. This
+eliminates the audible noise which often occurs when the LED current is pulsed in replica of the frequency and
+duty cycle of PWM control. Unlike other methods which filter the PWM signal for analog dimming, TPS61169
+regulation voltage is independent of the PWM logic voltage level which often has large variations.
+
+For optimum performance, use the PWM dimming frequency in the range of 5 kHz to 100 kHz. If the PWM
+frequency is lower than 5 kHz, it is out of the low pass filter's filter range, the FB regulation voltage ripple
+becomes large, causing large output ripple and may generate audible noise.
+
+Copyright © 2014, Texas Instruments Incorporated                                                        9
+TPS61169                                                                                           www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014                                   VBG
+                                                       204 mV
+Feature Description (continued)
+
+                                                 CTRL
+
+                                                               VREF                     EA Output
+
+                                                                             GM
+                                                                             Amplifier
+
+                                                                                                                                              FB
+
+                                    Figure 3. Programmable FB Voltage Using PWM Signal
+
+8.3.6 Undervoltage Lockout
+
+An undervoltage lockout prevents operation of the device at input voltages below typical 2 V. When the input
+voltage is below the undervoltage threshold, the device is shut down, and the internal switch FET is turned off. If
+the input voltage rises by undervoltage lockout hysteresis, the IC restarts.
+
+8.3.7 Thermal Foldback and Thermal Shutdown
+
+When TPS61169 drives heavy load for large size panel applications, the power dissipation increases a lot and
+the device junction temperature may reach a very high value, affecting the device function and reliability. In order
+to lower the thermal stress, the TPS61169 features a thermal foldback function. When the junction temperature is
+higher than 100°C, the switch current limit ILIM is reduced automatically as Figure 2 shows. This thermal foldback
+mechanism controls the power dissipation and keeps the junction temperature from rising to a very high value. If
+the typical junction temperature of 160°C is exceeded, an internal thermal shutdown turns off the device. The
+device is released from shutdown automatically when the junction temperature decreases by 15°C.
+
+8.4 Device Functional Modes
+
+8.4.1 Operation With CTRL
+
+The enable rising edge threshold voltage is 1.2 V. With the CTRL terminal is held below that voltage the device
+is disabled and switching is inhibited. The IC quiescent current is reduced in this state. When input voltage is
+above the UVLO threshold, and the CTRL terminal voltage is increased above the rising edge threshold, the
+device becomes active. Switching enables, and the soft-start sequence initiates.
+
+10                                                                                      Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                                                                                        TPS61169
+
+9 Application and Implementation                                                                                        ZHCSD24 - OCTOBER 2014
+
+                                                        NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI's customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+
+9.1 Application Information
+
+The TPS61169 device is a step-up DC-DC converter which can drive single or parallel LED strings for small- to
+large-size panel backlighting. This section includes a design procedure (Detailed Design Procedure) to select
+component values for the TPS61169 typical application (Figure 4).
+
+9.2 Typical Application                                                             L                D       10s1p
+                                                                                4.7 µH
+                                                2.7 V to 5.5 V                                         COUT
+                                                      VBAT                     TPS61169                1 µF
+                                                                   CIN   VIN
+                                                                 4.7 µF
+                                                                                               SW
+
+PWM DIMMING                                                              CTRL  FB
+   CONTROL                                                               GND
+                                                                                        RSET
+                                                                                      10.2
+
+Figure 4. TPS61169 2.7-V to 5.5-V Input, 10 LEDs in Series Output Converter
+
+9.2.1 Design Requirements
+For this design example, use the parameters listed in Table 1 as the input parameters.
+
+                                                                         Table 1. Design Parameters
+
+     DESIGN PARAMETER                                                                                EXAMPLE VALUE
+       Input voltage range                                                                              2.7 V to 5.5 V
+                                                                                                                10
+Output, LED number in a string                                                                                   1
+  Output, LED string number                                                                                  20 mA
+
+Output, LED current per string
+
+9.2.2 Detailed Design Procedure
+
+9.2.2.1 Inductor Selection
+
+The selection of the inductor affects power efficiency, steady state operation as well as transient behavior and
+loop stability. These factors make it the most important component in power regulator design. There are three
+important inductor specifications, inductor value, DC resistance and saturation current. Considering inductor
+value alone is not enough. The inductor value determines the inductor ripple current. Choose an inductor that
+can handle the necessary peak current without saturating. Follow Equation 3 to Equation 4 to calculate the
+inductor's peak current. To calculate the current in the worst case, use the minimum input voltage, maximum
+output voltage and maximum load current of application. In a boost regulator, the input DC current can be
+calculated as Equation 3.
+
+Copyright © 2014, Texas Instruments Incorporated                                                                        11
+TPS61169                                                                                     www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+    IL(DC)   VOUT u IOUT
+                VIN u K
+
+    where
+
+           · VOUT = boost output voltage
+
+           · IOUT = boost output current
+
+           · VIN = boost input voltage
+
+           ·  = power conversion efficiency                                                             (3)
+
+The inductor current peak to peak ripple can be calculated as Equation 4.
+
+    'IL(PP)                  1
+             L u ( 1  1 ) u FS
+
+                  VOUT  VIN VIN
+
+    where
+
+           · IL(PP) = inductor peak-to-peak ripple
+
+           · L = inductor value
+
+           · FS = boost switching frequency
+
+           · VOUT = boost output voltage
+
+           · VIN = boost input voltage                                                                  (4)
+
+Therefore, the peak current IL(P) seen by the inductor is calculated with Equation 5.
+
+    IL(P)             'IL(PP)
+            IL(DC) 
+                        2                                                                               (5)
+
+Inductor values can have ±20% tolerance with no current bias. When the inductor current approaches saturation
+level, its inductance can decrease 20% to 35% from the 0-A value depending on how the inductor vendor defines
+saturation current. Using an inductor with a smaller inductance value forces discontinuous PWM when the
+inductor current ramps down to zero before the end of each switching cycle. This reduces the boost converter's
+maximum output current, causes large input voltage ripple and reduces efficiency. Large inductance value
+provides much more output current and higher conversion efficiency. For these reasons, a 4.7-H to 10-H
+inductor value range is recommended, and 4.7-H inductor is recommended for higher than 5-V input voltage by
+considering inductor peak current and loop stability. Table 2 lists the recommended inductor for the TPS61169.
+
+                                   Table 2. Recommended Inductors for TPS61169
+
+ PART NUMBER               L (µH)         DCR MAX (m)  SATURATION          SIZE (L x W x H   VENDOR
+                                                       CURRENT (A)                 mm)
+ LPS4018-472ML               4.7                  125                                        Coilcraft
+ LPS4018-103ML               10                   200         1.9              4 x 4 x 1.8   Coilcraft
+PCMB051H-4R7M                4.7                   85         1.3              4 x 4 x 1.8    Cyntec
+PCMB051H-100M                10                   155           4           5.4 x 5.2 x 1.8   Cyntec
+                                                                3            5.4 x 5.2x 1.8
+
+9.2.2.2 Schottky Diode Selection
+
+The TPS61169 demands a low forward voltage, high-speed and low capacitance Schottky diode for optimum
+efficiency. Ensure that the diode average and peak current rating exceeds the average output current and peak
+inductor current. In addition, the diode reverse breakdown voltage must exceed the open LED protection voltage.
+ONSemi NSR0240 is recommended for the TPS61169.
+
+9.2.2.3 Output Capacitor Selection
+
+The output capacitor is mainly selected to meet the requirement for the output ripple and loop stability. This ripple
+voltage is related to capacitor capacitance and its equivalent series resistance (ESR). Assuming a capacitor with
+zero ESR, the minimum capacitance needed for a given ripple can be calculated with Equation 6:
+
+       COUT  (VOUT VIN ) K IOUT
+                  VOUT K FS K Vripple
+
+12                                                                         Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                                                                                                                       TPS61169
+
+                                                                                                                                                       ZHCSD24 - OCTOBER 2014
+
+where
+
+     · Vripple = peak-to-peak output ripple                                                                                                                                           (6)
+
+The additional part of the ripple caused by ESR is calculated using: Vripple_ESR = IOUT × RESR
+
+Due to its low ESR, Vripple_ESR could be neglected for ceramic capacitors, a 1-µF to 4.7-µF capacitor is
+recommended for typical application.
+
+9.2.2.4 LED Current Set Resistor
+The LED current set resistor can be calculated by Equation 1.
+
+9.2.2.5 Thermal Considerations
+
+The allowable IC junction temperature should be considered under normal operating conditions. This restriction
+limits the power dissipation of the TPS61169. The allowable power dissipation for the device can be determined
+by Equation 7:
+
+      PD  TJ - TA
+              R6JA
+
+where
+
+     · TJ is allowable junction temperature given in recommended operating conditions
+
+     · TA is the ambient temperature for the application
+
+     · RJA is the thermal resistance junction-to-ambient given in Power Dissipation Table                                                                                             (7)
+
+The TPS61169 device also features a thermal foldback function to reduce the thermal stress automatically.
+
+9.3 TPS61169 Application Curves
+
+Typical application condition is as in Figure 4, VIN = 3.6 V, RSET=10.2 , L = 4.7 µH, COUT = 1 µF, 10 LEDs in series (unless
+otherwise specified).
+
+100                                                                                                                            100
+
+                                                  10 LEDs in series
+
+                                                  6 LEDs in series
+
+90                                                                                                                             90
+
+Efficiency (%)80                                                                                                               80
+                                                                                                               Efficiency (%)
+70                                                                                                                             70
+
+60                                                                                                                             60                           Vin = 3.0 V
+
+                                                                                                                                                            Vin = 3.6 V
+
+                                                                                                                                                            Vin = 4.2 V
+
+                                                                                                                                                            Vin = 5.0 V
+
+50                                                                                                                             50
+
+     0 10 20 30 40 50 60 70 80 90 100                                                                                               0 10 20 30 40 50 60 70 80 90 100
+
+               Dimming Duty Cycle (%)                                D003                                                           Dimming Duty Cycle (%)                      D004
+
+                                                                                                                                    10 LEDs in series
+
+               Figure 5. Efficiency vs Dimming Duty Cycle                                                                           Figure 6. Efficiency vs Dimming Duty Cycle
+
+Copyright © 2014, Texas Instruments Incorporated                                                                                                                                      13
+TPS61169                                                                                                                                                                   www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+TPS61169 Application Curves (continued)
+
+Typical application condition is as in Figure 4, VIN = 3.6 V, RSET=10.2 , L = 4.7 µH, COUT = 1 µF, 10 LEDs in series (unless
+otherwise specified).
+
+    100                                                                                                                           100
+
+    90                                                                                                                            90
+
+    Efficiency (%)80                                                                                                              80
+                                                                                                                  Efficiency (%)
+    70                                                                                                                            70
+
+    60                                          Vin = 3.0 V                                                                       60                                       Vin = 3.0 V
+
+                                                Vin = 3.6 V                                                                                                                Vin = 3.6 V
+
+                                                Vin = 4.2 V                                                                                                                Vin = 4.2 V
+
+                                                Vin = 5.0 V                                                                                                                Vin = 5.0 V
+
+    50                                                                                                                            50
+
+         0 10 20 30 40 50 60 70 80 90 100                                                                                              0 10 20 30 40 50 60 70 80 90 100
+
+                        Dimming Duty Cycle (%)               D005                                                                                  Dimming Duty Cycle (%)               D006
+
+                        8 LEDs in series                                                                                                           6 LEDs in series
+
+             Figure 7. Efficiency vs Dimming Duty Cycle                                                                                    Figure 8. Efficiency vs Dimming Duty Cycle
+
+    SW (20 V/DIV)                                                                                                                 SW (20 V/DIV)
+
+    VOUT (100 mV/DIV, AC coupled)                                                                                                 VOUT (100 mV/DIV, AC coupled)
+    IInductor (500 mA/DIV)                                                                                                        IInductor (500 mA/DIV)
+                                                                                                                                  ILED (9 mA/DIV)
+    ILED (9 mA/DIV)
+
+                              Time = 1 µs/DIV                                                                                                         Time = 1 µs/DIV
+              Figure 9. Switching-Dimming Duty = 100%                                                                                  Figure 10. Switching-Dimming Duty = 50%
+
+    SW (20 V/DIV)                                                                                                                 PWM
+    VOUT (100 mV/DIV, AC coupled)                                                                                                 (2 V/DIV)
+    IInductor (500 mA/DIV)
+    ILED (5 mA/DIV)                                                                                                               IInductor
+                                                                                                                                  (300 mA/DIV)
+                              Time = 2 µs/DIV
+              Figure 11. Switching-Dimming Duty = 10%                                                                             VOUT (20 V/DIV)
+                                                                                                                                  ILED (9 mA/DIV)
+
+                                                                                                                                                   Time = 2 ms/DIV
+
+                                                                                                                                       Figure 12. Start-Up Dimming Duty = 100%
+
+14                                                                                                                                                 Copyright © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                                                                                                       TPS61169
+
+                                                                                                                       ZHCSD24 - OCTOBER 2014
+
+TPS61169 Application Curves (continued)
+
+Typical application condition is as in Figure 4, VIN = 3.6 V, RSET=10.2 , L = 4.7 µH, COUT = 1 µF, 10 LEDs in series (unless
+otherwise specified).
+
+                                                                              PWM (2 V/DIV)
+
+PWM (2 V/DIV)
+
+IInductor                                                                     IInductor (300 mA/DIV)
+(300 mA/DIV)
+                                                                              VOUT (20 V/DIV)
+VOUT (20 V/DIV)                                                               ILED (9 mA/DIV)
+
+ILED (9 mA/DIV)
+
+                 Time = 2 ms/DIV                                                                      Time = 2 ms/DIV
+
+           Figure 13. Start-Up Dimming Duty = 50%                                      Figure 14. Shutdown Dimming Duty = 100%
+
+PWM (2 V/DIV)                                                                 PWM (2 V/DIV)
+
+IInductor (300 mA/DIV)                                                        VOUT (5 V/DIV, AC coupled)
+VOUT (20 V/DIV)                                                               IInductor (300 mA/DIV)
+ILED (9 mA/DIV)
+                                                                              ILED (9 mA/DIV)
+                          Time = 2 ms/DIV
+                             Duty = 50%                                                                 Time = 5 ms/DIV
+                                                                                                      Duty = 1%-100%-1%
+                   Figure 15. Shutdown Dimming
+                                                                              Figure 16. Dimming Transient-Dimming
+                                                            VFB (200 mV/DIV)
+
+                 VOUT (20 V/DIV)
+
+                 IInductor (600 mA/DIV)
+                 ILED (9 mA/DIV)
+
+                                                     Time = 50 µs/DIV
+                                                  Figure 17. Open LED Protection
+
+Copyright © 2014, Texas Instruments Incorporated                                                                                15
+TPS61169                                                              www.ti.com.cn
+
+ZHCSD24 - OCTOBER 2014
+
+10 Power Supply Recommendations
+
+The device is designed to operate from an input voltage supply range between 2.7 V and 5.5 V. This input supply
+must be well regulated. If the input supply is located more than a few inches from the TPS61169 device,
+additional bulk capacitance may be required in addition to the ceramic bypass capacitors.
+
+11 Layout
+
+11.1 Layout Guidelines
+
+As for all switching power supplies, especially those high frequency and high current ones, layout is an important
+design step. If layout is not carefully done, the regulator could suffer from instability as well as noise problems.
+Therefore, use wide and short traces for high current paths. The input capacitor CIN needs to be close to VIN pin
+and GND pin in order to reduce the input ripple seen by the IC. If possible choose higher capacitance value for it.
+The SW pin carries high current with fast rising and falling edge, therefore, the connection between the SW pin to
+the inductor should be kept as short and wide as possible. The output capacitor COUT should be put close to
+VOUT pin. It is also beneficial to have the ground of COUT close to the GND pin since there is large ground return
+current flowing between them. FB resistor should be put close to FB pin. When laying out signal ground, it is
+recommended to use short traces separated from power ground traces, and connect them together at a single
+point close to the GND pin.
+
+11.2 Layout Example
+
+                        GND                      Bottom
+                                                  GND
+                             VIN                 Plane
+                                           CTRL
+
+                             SW
+                                    GND
+
+                                           FB
+                              VIN
+                                                                GND
+                                                                VOUT
+
+                        Figure 18. TPS61169 Board Layout
+
+16                                                                     © 2014, Texas Instruments Incorporated
+www.ti.com.cn                                         TPS61169
+
+12                                       ZHCSD24 - OCTOBER 2014
+
+12.1 
+TI 
+ TI 
+
+12.2 
+All trademarks are the property of their respective owners.
+12.3 
+
+              ESD   MOS 
+             
+
+12.4 
+SLYZ022 -- TI 
+
+     
+
+13 
+
+  
+ 
+
+ © 2014, Texas Instruments Incorporated  17
+        
+
+(TI)  JESD46 ,  
+JESD48 , 
+TI 
+
+TI  TI  TI  TI  
+
+
+TI  TI  
+
+
+TI  TI  TI  TI  
+TI  TI  
+ TI  
+
+ TI  TI  
+TI 
+
+ TI  TI  TI  
+TI 
+
+ TI  TI  
+ 
+  TI 
+ TI 
+
+ TI TI  
+
+
+TI  FDA Class III 
+
+ TI "" TI / 
+ TI  
+
+
+TI  ISO/TS16949  ISO/TS16949 
+TI
+
+                                              
+        www.ti.com.cn/audio                     www.ti.com.cn/telecom
+        www.ti.com.cn/amplifiers                www.ti.com.cn/computer
+DLP®    www.ti.com.cn/dataconverters            www.ti.com/consumer-apps
+DSP -   www.dlp.com                             www.ti.com/energy
+        www.ti.com.cn/dsp                       www.ti.com.cn/industrial
+        www.ti.com.cn/clockandtimers            www.ti.com.cn/medical
+        www.ti.com.cn/interface                 www.ti.com.cn/security
+        www.ti.com.cn/logic                     www.ti.com.cn/automotive
+ (MCU)  www.ti.com.cn/power                     www.ti.com.cn/video
+RFID    www.ti.com.cn/microcontrollers
+OMAP    www.ti.com.cn/rfidsys                 www.deyisupport.com
+        www.ti.com/omap                       IMPORTANT NOTICE
+        www.ti.com.cn/wirelessconnectivity
+
+         1568 32  200122
+                       Copyright © 2014, 
+                                                                                                                                              PACKAGE OPTION ADDENDUM
+
+www.ti.com                                                                                                                                                                               11-Dec-2014
+
+PACKAGING INFORMATION
+
+Orderable Device  Status    Package Type Package           Pins Package      Eco Plan     Lead/Ball Finish    MSL Peak Temp                         Op Temp (°C)                                 Device Marking       Samples
+ TPS61169DCKR                                     Drawing             Qty                                                                              -40 to 85
+                       (1)                                                           (2)               (6)                   (3)                                                                               (4/5)
+                            SC70  DCK                        5 3000
+                  ACTIVE                                                   Green (RoHS       CU NIPDAU      Level-1-260C-UNLIM                                                           SZL
+                                                                            & no Sb/Br)
+
+(1) The marketing status values are defined as follows:
+ACTIVE: Product device recommended for new designs.
+LIFEBUY: TI has announced that the device will be discontinued, and a lifetime-buy period is in effect.
+NRND: Not recommended for new designs. Device is in production to support existing customers, but TI does not recommend using this part in a new design.
+PREVIEW: Device has been announced but is not in production. Samples may or may not be available.
+OBSOLETE: TI has discontinued the production of the device.
+
+(2) Eco Plan - The planned eco-friendly classification: Pb-Free (RoHS), Pb-Free (RoHS Exempt), or Green (RoHS & no Sb/Br) - please check http://www.ti.com/productcontent for the latest availability
+information and additional product content details.
+TBD: The Pb-Free/Green conversion plan has not been defined.
+Pb-Free (RoHS): TI's terms "Lead-Free" or "Pb-Free" mean semiconductor products that are compatible with the current RoHS requirements for all 6 substances, including the requirement that
+lead not exceed 0.1% by weight in homogeneous materials. Where designed to be soldered at high temperatures, TI Pb-Free products are suitable for use in specified lead-free processes.
+Pb-Free (RoHS Exempt): This component has a RoHS exemption for either 1) lead-based flip-chip solder bumps used between the die and package, or 2) lead-based die adhesive used between
+the die and leadframe. The component is otherwise considered Pb-Free (RoHS compatible) as defined above.
+Green (RoHS & no Sb/Br): TI defines "Green" to mean Pb-Free (RoHS compatible), and free of Bromine (Br) and Antimony (Sb) based flame retardants (Br or Sb do not exceed 0.1% by weight
+in homogeneous material)
+
+(3) MSL, Peak Temp. - The Moisture Sensitivity Level rating according to the JEDEC industry standard classifications, and peak solder temperature.
+
+(4) There may be additional marking, which relates to the logo, the lot trace code information, or the environmental category on the device.
+
+(5) Multiple Device Markings will be inside parentheses. Only one Device Marking contained in parentheses and separated by a "~" will appear on a device. If a line is indented then it is a continuation
+of the previous line and the two combined represent the entire Device Marking for that device.
+
+(6) Lead/Ball Finish - Orderable Devices may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead/Ball Finish values may wrap to two lines if the finish
+value exceeds the maximum column width.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information
+provided by third parties, and makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and
+continues to take reasonable steps to provide representative and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals.
+TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+                                                                           Addendum-Page 1
+www.ti.com                   PACKAGE OPTION ADDENDUM
+
+                                                                                            11-Dec-2014
+
+            Addendum-Page 2
+        
+
+(TI)  JESD46 ,  
+JESD48 , 
+TI 
+
+TI  TI  TI  TI  
+
+
+TI  TI  
+
+
+TI  TI  TI  TI  
+TI  TI  
+ TI  
+
+ TI  TI  
+TI 
+
+ TI  TI  TI  
+TI 
+
+ TI  TI  
+ 
+  TI 
+ TI 
+
+ TI TI  
+
+
+TI  FDA Class III 
+
+ TI "" TI / 
+ TI  
+
+
+TI  ISO/TS16949  ISO/TS16949 
+TI
+
+                                              
+        www.ti.com.cn/audio                     www.ti.com.cn/telecom
+        www.ti.com.cn/amplifiers                www.ti.com.cn/computer
+DLP®    www.ti.com.cn/dataconverters            www.ti.com/consumer-apps
+DSP -   www.dlp.com                             www.ti.com/energy
+        www.ti.com.cn/dsp                       www.ti.com.cn/industrial
+        www.ti.com.cn/clockandtimers            www.ti.com.cn/medical
+        www.ti.com.cn/interface                 www.ti.com.cn/security
+        www.ti.com.cn/logic                     www.ti.com.cn/automotive
+ (MCU)  www.ti.com.cn/power                     www.ti.com.cn/video
+RFID    www.ti.com.cn/microcontrollers
+OMAP    www.ti.com.cn/rfidsys                 www.deyisupport.com
+        www.ti.com/omap                       IMPORTANT NOTICE
+        www.ti.com.cn/wirelessconnectivity
+
+        Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+                             Copyright © 2016, Texas Instruments Incorporated
+

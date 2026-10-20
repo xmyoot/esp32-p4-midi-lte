@@ -1,0 +1,18 @@
+# KiCad backups / caches
+*-backups/
+*.kicad_prl
+*.lck
+_autosave-*
+~*.lck
+fp-info-cache
+*.bak
+# analysis cache (manifest tracked)
+analysis/*/
+!analysis/manifest.json
+# python
+__pycache__/
+*.pyc
+# fab outputs are regenerated; final release zipped separately
+fab/tmp/
+.easyeda_cache/
+scripts/__pycache__/

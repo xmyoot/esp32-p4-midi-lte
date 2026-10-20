@@ -1,0 +1,210 @@
+SIM7600-H Series
+
+SIMCom LTE Cat 4 Module
+
+                           Product Description
+
+                           The SIM7600-H series is the LTE Cat 4 module which
+                           supports wireless communication modes of LTE-TDD/
+                           LTE-FDD/HSPA+/GSM/GPRS/EDGE etc. It supports
+                           maximum 150Mbps downlink rate and 50Mbps uplink rate.
+
+Multi-        Cat 4  LCC1  The SIM7600-H series adopts LCC1 form factor and is
+Band                       compatible with SIM5320/SIM5360 series(UMTS/HSPA+
+                           modules), and SIM7600 series(LTE modules), which
+                           enables smooth migration from 3G products to LTE
+                           products, and greatly facilitates more compatible product
+                           design for the customer needs.
+
+VoLTE   Compact      FOTA  The SIM7600-H series integrates multiple satellite high
+           Size       SSL  accuracy positioning GNSS systems, with multiple built-in
+                           network protocols, supports drivers for main operation
+TCP/IP  USB 2.0            systems (USB driver for Windows, Linux and Android etc.)
+                           and software function, AT commands are compatible with
+                           SIM7500/SIM7600 series modules. Meanwhile the
+                           SIM7600-H series integrates main industrial standard
+                           interfaces, with powerful expansibility, including abundant
+                           interfaces such as UART, USB, I2C, GPIO, which is
+                           suitable for main IoT applications such as telematics,
+                           surveillance devices, CPE, industrial routers, and remote
+                           diagnostics etc.
+
+Key Benefits                    NOTE
+                           1: The form factor of SIM7600NA-H & SIM7600G-H is LCC+LGA
+
+u LCC1 form factor with abundant interfaces
+u Suitable for LTE, UMTS and GSM networks with global coverage
+u Abundant software functions: FOTA, LBS, TLS, VoLTE
+u Multi-constellation GNSS receiver support
+
+u AT commands of the SIM7600-H series are compatible with the SIM7500/SIM7600 series modules
+
+Copyright © 2020 SIMCom Wireless Solutions Limited All Rights Reserved
+Building B, SIM Technology Building, No.633, Jinzhong Road Changning District, Shanghai P.R.China
+Tel: 86-21-31575100 Email: support@simcom.com Web: www.simcom.com
+Product                   SIM7600A-H                   SIM7600V-H                   SIM7600SA-H                                                     SIM7600JC-H
+
+Form Factor               LCC, 87PIN                   LCC, 87PIN                   LCC, 87PIN                                                      LCC, 87PIN
+Dimensions(mm)            30.0*30.0*2.9                30.0*30.0*2.9                                                                                30.0*30.0*2.9
+                                                       B2/B4/B5/B13                 30.0*30.0*2.9                                                   B1/B3/B8/B18/B19/B26
+               LTE-FDD    B2/B4/B12                                                 B1/B2/B3/B4/B5/B7/B8/B28/
+                                                       o                            B66                                                             o
+Frequency      LTE-TDD    B2/B5                        -40 ~ +85                    B40                                                             -40 ~ +85
+Bands          WCDMA                                                                B1/B2/B5/B8
+                          o                            3.4~ 4.2                     850/900/1800/1900MHz
+               GSM        -40 ~ +85                    2.3                          o
+
+GNSS                      3.4~ 4.2                     150(DL)/50(UL)               -40 ~ +85
+                          2.3
+Temperature               3.3                          TCP/IP/IPV4/IPV6/
+                                                       Multi-PDP/FTP/FTPS/HTTP/
+Electrical Features       150(DL)/50(UL)               HTTPS/DNS
+                          42(DL)/5.76(UL)              
+Supply Voltage(V)         384(DL)/384(UL)                                           3.4~ 4.2                                                        3.4~ 4.2
+                                                       o                            2.3                                                             2.3
+Power          LTE        TCP/IP/IPV4/IPV6/            o                            3.3
+                          Multi-PDP/FTP/FTPS/HTTP/     o
+               WCDMA,     HTTPS/DNS                                                 2.8
+Consumption DRX=9                                      
+                                                       
+(mA)           GSM,BS_PA  o                            Android 5.0/6.0/7.0/8.0/9.0
+               _MFRMS=2   o                            Microsoft Windows 7/8/10
+                          o                            Linux/Android
+Data Transfer                                          
+                                                       
+LTE(Mbps)                                              Win8/Win10                   150(DL)/50(UL)                                                  150(DL)/50(UL)
+                          Android 5.0/6.0/7.0/8.0/9.0  Linux/Windows 7/8/10         42(DL)/5.76(UL)
+HSPA+(Mbps)               Microsoft Windows 7/8/10     o                            384(DL)/384(UL)
+                          Linux/Android                USB/FOTA                     236.8(DL)/236.8(UL)
+WCDMA(Kbps)               
+                                                       1.8V/3.0V
+GPRS/EDGE(Kbps)           Win8/Win10                   
+                          Linux/Windows 7/8/10         
+Software Features         o                            o
+                          USB/FOTA                     
+Protocol                                                                            TCP/IP/IPV4/IPV6/                                               TCP/IP/IPV4/IPV6/
+                          1.8V/3.0V                    o                            Multi-PDP/FTP/FTPS/HTTP/                                        Multi-PDP/FTP/FTPS/
+TLS                                                                                 HTTPS/DNS                                                       HTTP/HTTPS/DNS
+File System                                                                                                                                         
+Audio Record/Play         o                                                                                                                         
+TTS                                                    FCC/GCF/RoHS/REACH           o                                                               o
+DTMF                                                   Verizon                      o                                                               o
+LBS                       o                                                         o                                                               o
+FOTA                                                                                                                                                
+Jamming Detection                                                                                                                                   
+Android RIL                                                                                                                                         
+                          FCC/PTCRB/IC/RoHS/                                        Android 5.0/6.0/7.0/8.0/9.0                                     Android 5.0/6.0/7.0/8.0/9.0
+USB Driver                REACH                                                     Microsoft Windows 7/8/10                                        Microsoft Windows 7/8/10
+                          AT&T                                                      Linux/Android                                                   Linux/Android
+WWAN (RNDIS)                                                                                                                                        
+ECM                                                                                                                                                 
+MBIM                                                                                Win8/Win10                                                      Win8/Win10
+NDIS                                                                                Linux/Windows 7/8/10                                            Linux/Windows 7/8/10
+Open Linux                                                                          o                                                               o
+Firmware Upgrade                                                                    USB/FOTA                                                        USB/FOTA
+Interfaces
+SIM Card                                                                            1.8V/3.0V                                                       1.8V/3.0V
+UART                                                                                                                                                
+USB                                                                                                                                                 
+PCM                                                                                 o                                                               o
+ADC                                                                                                                                                 
+SD Card                                                                                                                                             
+SPI                                                                                 o                                                               o
+I2C                                                                                                                                                 
+Diversity Receiver                                                                                                                                  
+Certification
+                                                                                    CE-RED/ACMA/FCC/NCC/                                            Telec/JATE/RoHS/REACH
+Regulatory                                                                          RoHS/REACH/Anatel                                               Docomo/Softbank/KDDI
+
+Carrier
+
+                                                                                                                                         : support  o: optional  * : on going
+
+Copyright © 2020 SIMCom Wireless Solutions Limited All Rights Reserved                                                                                             2
+Building B, SIM Technology Building, No.633, Jinzhong Road Changning District, Shanghai P.R.China
+Tel: 86-21-31575100 Email: support@simcom.com Web: www.simcom.com
+Product                   SIM7600E-H                   SIM7600E-H1C                 SIM7600NA-H                  SIM7600G-H R2
+
+Form Factor               LCC, 87PIN                   LCC, 87PIN                   LCC+LGA, 119PIN              LCC+LGA, 119PIN
+Dimensions(mm)            30.0*30.0*2.9                30.0*30.0*2.9                30.0*30.0*2.9                30.0*30.0*2.9
+                                                                                    B2/B4/B5/B12/B13/B14/        B1/B2/B3/B4/B5/B7/B8/B12/B13/
+Frequency      LTE-FDD    B1/B3/B5/B7/B8/B20           B1/B3/B5/B7/B8/B20           B25/B26/B66/B71              B18/B19/B20/B25/B26/B28/B66
+Bands                                                  B38/B40/B41                  B41                          B34/B38/B39/B40/B41
+               LTE-TDD    B38/B40/B41                  B1/B5/B8                                                  B1/B2/B4/B5/B6/B8/B19
+               WCDMA      B1/B5/B8                     900/1800MHz                  o                            850/900/1800/1900MHz
+                          900/1800MHz                  o                            -40 ~ +85                    o
+               GSM        o                            -40 ~ +85                                                 -40 ~ +85
+                          -40 ~ +85                                                 3.4~ 4.2
+GNSS                                                   3.4~ 4.2                     2.3                          3.4~ 4.2
+                          3.4~ 4.2                     2.3                                                       2.3
+Temperature               2.3                          3.3
+                                                                                                                 3.3
+Electrical Features       3.3                          2.8
+                                                                                                                 2.8
+Supply Voltage(V)         2.8
+                                                                                                                 150(DL)/50(UL)
+               LTE        150(DL)/50(UL)                                                                         42(DL)/5.76(UL)
+                          42(DL)/5.76(UL)                                                                        384(DL)/384(UL)
+Power          WCDMA,     384(DL)/384(UL)                                                                        236.8(DL)/236.8(UL)
+                          236.8(DL)/236.8(UL)
+Consumption DRX=9                                                                                                TCP/IP/IPV4/IPV6/
+                          TCP/IP/IPV4/IPV6/                                                                      Multi-PDP/FTP/FTPS/HTTP/
+(mA)           GSM,BS_PA  Multi-PDP/FTP/FTPS/                                                                    HTTPS/DNS
+               _MFRMS=2   HTTP/HTTPS/DNS                                                                         
+                                                                                                                 
+Data Transfer                                                                                                    o
+                          o                                                                                      o
+LTE(Mbps)                 o                            150(DL)/50(UL)               150(DL)/50(UL)               o
+                          o                            42(DL)/5.76(UL)                                           
+HSPA+(Mbps)                                            384(DL)/384(UL)                                           
+                                                       236.8(DL)/236.8(UL)                                       
+WCDMA(Kbps)                                                                                                      Android 5.0/6.0/7.0/8.0/9.0
+                          Android 5.0/6.0/7.0/8.0/9.0                                                            Microsoft Windows 7/8/10
+GPRS/EDGE(Kbps)           Microsoft Windows 7/8/10                                                               Linux/Android
+                          Linux/Android                                                                          
+Software Features                                                                                                
+                                                                                                                 Win8/Win10
+Protocol                  Win8/Win10                   TCP/IP/IPV4/IPV6/            TCP/IP/IPV4/IPV6/            Linux/Windows 7/8/10
+                          Linux/Windows 7/8/10         Multi-PDP/FTP/FTPS/          Multi-PDP/FTP/FTPS/          o
+TLS                       o                            HTTP/ HTTPS/DNS              HTTP/HTTPS/DNS               USB/FOTA
+File System               USB/FOTA                                                  
+Audio Record/Play                                                                                                1.8V/3.0V
+TTS                       1.8V/3.0V                    o                            o                            
+DTMF                                                   o                            o                            
+LBS                                                    o                            o                            o
+FOTA                      o                                                                                      
+Jamming Detection                                                                                                
+Android RIL                                                                                                      o
+                          o                            Android 5.0/6.0/7.0/8.0/9.0  Android 5.0/6.0/7.0/8.0/9.0  
+USB Driver                                             Microsoft Windows 7/8/10     Microsoft Windows 7/8/10     
+                                                       Linux/Android                Linux/Android
+WWAN (RNDIS)                                                                                                     CE-RED/FCC/IC/RCM/CCC/KC/
+ECM                                                                                                              Telec/Jate/Anatel/NCC/IMDA/
+MBIM                                                   Win8/Win10                   Win8/Win10                   ICASA/SRRC/PTCRB/GCF/RoHS
+NDIS                                                   Linux/Windows 7/8/10         Linux/Windows 7/8/10         / REACH
+Open Linux                                                                          o                            AT&T/Verizon*/T-mobile/US
+Firmware Upgrade                                       USB                          USB/FOTA                     Celluar/Telstra*/DTAG
+Interfaces
+SIM Card                                               1.8V/3.0V                    1.8V/3.0V
+UART                                                                                
+USB                                                                                 
+PCM                                                    o                            o
+ADC                                                                                 
+SD Card                                                                             
+SPI                                                    o                            o
+I2C                                                                                 
+Diversity Receiver                                     o                            
+Certification
+
+Regulatory                CE-RED/RoHS/REACH/           CE-RED/RoHS/REACH            FCC/IC/PTCRB/GCF/
+                          IMDA/GCF                                                  RoHS/REACH
+
+Carrier                   DTAG/Vodafone                                             AT&T/Verizon/T-mobile
+                                                                                    /US Celluar
+
+Copyright © 2020 SIMCom Wireless Solutions Limited All Rights Reserved                              : support    o: optional  * : on going
+
+Building B, SIM Technology Building, No.633, Jinzhong Road Changning District, Shanghai P.R.China                               3
+
+Tel: 86-21-31575100 Email: support@simcom.com Web: www.simcom.com
+

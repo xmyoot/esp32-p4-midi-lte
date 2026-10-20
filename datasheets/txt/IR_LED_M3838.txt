@@ -1,0 +1,457 @@
+              
+
+                   Production Specification
+Customer name
+Production name 3838IR
+ Model M3838E1IRS1G09-850
+ Part number
+ Date
+
+                             
+
+              CUSTOMER CONFIRMATION
+
+                                                  
+
+Confirmed by                 Checked by  Approved by
+
+ 
+Note: please sign back your valuable comments after testing, thank you for your
+support!
+
+ :           22 0  44                    /                                       1
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007    FORM-YYG-SA-003-A
+                          
+
+                               Catalog
+
+1. Features 
+2. Applications 
+3. Package Dimensions
+4. Maximum rating
+5. Electro-optical characteristics
+6. Typical optical characteristics curves
+7. BIN Bin sorting parameters
+8. Tape Specification
+9. Packaging
+10. Label description
+11. Reliability Test Items And Conditions
+12. Use of caveats
+
+ :           22 0  44        /                                          2
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+1.Features 
+
+  3.8*3.8*2.29mm                                  
+
+   Encapsulation Size                            Ceramic substrate encapsulation
+
+                                                   RoHS 
+
+ Welding Method: Reflow soldering                Compliance with RoHS standards
+
+                                                 
+
+High reliability packaging energy stabilization  Small size, low power
+                                                   consumption, good directivity
+2.Applications 
+
+ 
+
+Camera (video shooting), digital photography, surveillance, beauty, treatment of skin
+diseases, etc
+
+ 
+
+Building intercom, burglar alarm, infrared waterproof, non visual light source, etc
+
+3Package Dimensions
+
+1. mm .
+
+Remarks: All units of size in mm units.
+
+2. 0.1mm
+
+A positive and negative tolerance of 0.1 mm without a clear indication.
+
+ :           22 0  44                            /                                3
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007                      FORM-YYG-SA-003-A
+4 .Maximum rating(Ta=25)
+
+                                                                          
+
+Project               Symbol                  Rating                      Unit
+
+                         IFP                     1000                        mA
+
+Peak forward current
+
+                          IV                       400                       mW
+
+Optical power
+
+                          VR                       5                          V
+
+Reverse voltage
+
+                          IR                       10                        µA
+
+Leakage current
+
+                      Topr                    -4085                          
+
+working temperature
+
+                      Tstg                       530                         
+
+Storage temperature
+
+                      Tsld               240 30s                             
+
+welding temperature           Reflow soldering 240  not more than 30s
+
+                                         300 3s
+
+                              Manual welding at 300  for no more than 3S
+
+ESD HBM)                 ESD                     4000                         V
+
+10ms,0.1Pulse width  10ms, duty cycle  0.1
+
+5.Electro-optical characteristics(Ta=25)
+
+                       mA    
+
+Project               Symbol Test conditions  Min       Typ      Max      Unit
+
+                      VF      IF=350mA        1.4       -        2.0      V
+
+Forward voltage
+
+                      IF      -               -         700      1000     mA
+
+Forward current
+
+                      IV      -               -         400      -        mW
+
+Optical power
+
+                      2½      IF=350mA        -         60       120      °
+
+Viewing Angle
+
+                      p       IF=350mA        845       850      855      nm
+
+Peak wavelength
+
+                      R       IF=350mA        -         4.5      -        /W
+
+Thermal resistance
+
+ :           22 0  44                         /                                  4
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007                   FORM-YYG-SA-003-A
+6. Typical optical characteristics curves
+
+Relationship between voltage and current    Relationship between current and optical power
+
+The relationship between current and power  Relationship between current and peak wavelength
+
+Luminous angle                              Spectral wavelength
+
+ :           22 0  44                       /                                                 5
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007                 FORM-YYG-SA-003-A
+7 . BIN Bin sorting parameters
+
+( 1 )  Forward voltage VF( tolerance±0.05V@IF=350mA)
+
+ min(V)                       max(V)
+
+1.6                                                   2.0
+
+2.0                                                   2.2
+
+2.2                                                   2.4
+
+8.Tape Specification800PCS/(800 pcs / Reel)
+
+ :           22 0  44        /                                          6
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+9.Packaging
+
+10.Label description
+
+                                                     
+Product model                                        Optical power
+
+                    P/N:     e                       
+Product wavelength  WL:      VF:                     Voltage
+                    IF:      Qty
+                    Lot                              
+electric current                                     Quantity
+                     70-75  15 
+                           
+Production batch
+
+Please use 70-75 degree dehumidification for more than 15 hours.
+  Please sub contract the light splitting products, thank you!
+
+ :           22 0  44             /                                     7
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007       FORM-YYG-SA-003-A
+11.Reliability Test Items And Conditions
+
+                                                                                            
+Test items            Test conditions          Test     Test time                   Sample  Pass
+                                               current                              size    rate
+
+                      Ta*-4085, 1min           N/A      50 cycles 25                        100%
+                      10sec1min
+Thermal Shock
+
+                      Ta-402585                N/A      20 cycles 25                        100%
+                      25 30min 5min 30min
+Temperature cycle     5min
+
+                      Ta2585-10,               N/A      10 cycles 25                        100%
+                                                        1000 hrs 25                         100%
+Resistance to         RH = 90% 24 hrs/1 cycle            200 hrs 25                         100%
+moisture                                                1000 hrs 25                         100%
+                                                          48 min 25                         100%
+                      Ta = 120                 N/A
+
+High temperature
+
+storage
+
+ Ta = 85RH = 90%                               N/A
+
+High temperature and
+
+humidity storage
+
+                      Ta = -40                 N/A
+
+Low temperature
+
+storage
+
+                      1002000100Hz Sweep       N/A
+
+Vibration experiment 4min 200m/s2,34
+
+                      245  5sec  N/A                                                25      100%
+
+Weldability test      16
+
+                      260  10sec               N/A                                  25      100%
+
+Reflow
+
+                      R  1.5 k C =             N/A                                  25      100%
+
+Antistatic            100pFV±2kV3
+capability
+
+:
+
+Criteria for unqualified reliability test
+
+                      IVAttenuation over 30%
+
+                      VfChange more than 20%
+
+1 2 
+
+RemarksThe test of the same experimental result should be completed within 2 hours
+
+2
+
+The test can only be carried out after each experiment is completed and the material returns to normal
+environmental conditions.
+
+             :           22 0  44              /                                                        8
+
+         Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+            TEL: 0755-81455185 81455007        FORM-YYG-SA-003-A
+12.Use of caveats
+1 Storage
+
+    5-30°C
+ 60%
+
+In order to avoid the influence of moisture, we suggest that the storage condition of
+the product before unpacking is 5-30 ° C, and the relative humidity is less than 60%;
+
+    LED  24H 
+
+70°C±5°C12H
+
+Please use and install the unpacked LED light source within 24h. If the product is not
+used up, please dehumidify and vacuum it and then seal it. Dehumidification must
+be carried out when the dehumidification exceeds one week or the humidity card
+changes. The dehumidification condition: 70 ° C ± 5 ° C, 12h
+
+   
+
+The product is sealed and kept for one year
+
+2 Assembly precautions
+   ,
+
+ 260°C. 1000g 
+
+
+Welding conditions: reflow soldering must be used for this product, and the
+maximum temperature of reflow curve shall not exceed 260 ° C. during operation or
+storage, no more than 1000g of external force or sharp objects shall act on the
+surface of the lamp bead (such as pressure, friction and other external forces as well
+as forceps, tweezers and other tools) to avoid component damage;
+
+ :           22 0  44        /                                          9
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+ 
+
+
+
+If the use conditions are exceeded, we will not be able to guarantee the stability of
+
+the product. If you need to use the excess operating conditions, please make a risk
+
+assessment.
+
+3 Anti static measures
+
+ 
+
+
+
+
+
+Please take adequate measures to prevent the generation of static electricity, such as
+
+wearing electrostatic ring or anti-static finger cover; each manufacturing project
+
+should be connected to the ground to avoid electrical electrification of the product.
+
+4 Temperature control
+
+ 
+
+
+
+In order to reduce the contact thermal resistance during assembly, please note that
+
+the heat transfer paste of good quality is applied evenly and the distribution area is
+
+reasonable during the assembly process, and there is no too little or unequal height.
+
+ 500V
+
+The heat dissipation medium shall be able to pass the dielectric withstand voltage
+
+test at least 500V.
+
+5 Drive control
+
+ 
+
+
+
+Drive control this product needs to use constant current source for driving, and the
+
+output current meets the power use range specified in the specification. If constant
+
+voltage source or other conditions are needed, please conduct risk assessment on
+
+the use effect.
+
+ :           22 0  44        /                                                          10
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+6 Other
+   
+
+
+
+This product can not be used under the following conditions. If the product is used
+under the following conditions, please evaluate its use risk and effect:
+
+       ---
+
+            Direct or indirect wetting or dampness, such as rain, etc;
+
+       ---
+
+            Damaged or eroded by sea water;
+
+       ---( Cl2,H2SNH3SOxNOx  
+
+            Exposed to corrosive gases (such as Cl2, H2S, NH3, Sox, NOx, etc.);
+
+       ---
+
+            Exposed to dust, liquid or oil;
+
+     LED 
+, LED  5
+
+
+All high-power light-emitting LED products are installed on the aluminum core
+printed circuit board, which can be directly lit. However, we do not recommend
+lighting high-power LED for more than 5 seconds without a proper heat dissipation
+device;
+
+   , 260 260
+ LED 
+
+Reflow should not be more than two times. The maximum reflow temperature is
+recommended below 260 . When the temperature exceeds 260 , LED products
+may fail;
+
+ :           22 0  44        /                                          11
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+   ( 260):
+
+The lead-free reflow soldering curve is as follows (the maximum temperature is set at
+260 )
+
+2021.03 (release)
+ () 
+Specification information (including design, size, typical data) will not be changed without prior notice.
+
+ :           22 0  44        /                                                                              12
+
+Address:building44,No.220TianliaoRoad,Guangming New District, Shenzhen
+
+TEL: 0755-81455185 81455007  FORM-YYG-SA-003-A
+

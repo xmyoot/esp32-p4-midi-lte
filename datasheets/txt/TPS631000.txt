@@ -1,0 +1,1368 @@
+                                                                                                                                         
+
+                                                                                                                                       TPS631000
+
+                                                                                                             ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+         TPS631000 1.5A /
+
+1                                                   2 
+
+·  1.6V  5.5V                                       · 
+                                                        
+    -  1.65V
+· 1.2V  5.3V                                        · /
+· 3A                                                    
+
+    - VIN  3VVOUT = 3.3V  2A                        · IP 
+    - VIN  2.7VVOUT = 3.3V  1.5A                        
+· 
+                                                    · 
+    - 8A                                            · 
+    - 
+· 1A  150mV                                         3 
+· /
+                                                    TPS631000 
+    -  < 20mV                                       / 3A 
+    -                                                1.6V  5.5V TPS631000 
+    -                                               
+    - 2MHz 
+·                                                   
+                                                    TPS631000  3 /
+    - 
+    -                                               
+    -                                               8A 
+    -                                               
+    -                                               
+· 
+                                                    TPS631000  1.2mm ×
+    -  1µH                                          2.1mm SOT-583  1H  0805
+    -  VOUT  0805 
+·  TPS631000  WEBENCH® Power Designer               
+    
+                                                                                           (2)
+                                                    TPS631000                           2.1mm × 1.6mm
+                                                                                   (1)
+
+                                                                            DRLSOT-5X3
+                                                                                     8
+
+                                                    (1)  10
+                                                    (2)  × 
+
+                     L1                                             100
+
+                LX1            LX2                                  95
+               VIN            VOUT
+VI                                              VO
+       CI                           CO              Efficiency (%)  90
+
+                                                                    85
+
+         VEXT
+
+To/From        MODE           FB                                    80                                                        VIN=1.6 V
+System                                                                                                                        VIN=2.8 V
+               EN                                                   75                                                        VIN=3.6 V
+                         GND                                                                                                  VIN=4.2 V
+                                                                    70                                                        Vin=5.5V
+                                                                    0.0001  0.001
+                                                                                      0.01 0.05 0.2 0.5 1 2 3 45
+                                                                                   Output Current (A)
+
+                                                     (VOUT = 3.3V)
+
+ TI TI  
+
+ ti.com 
+                                                                                                                                            English Data Sheet: SLVSFH3
+TPS631000                                                                                www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+                                               
+
+1 ................................................................................... 1  7 .......................................................................10
+2 ................................................................................... 1     7.1 ....................................................................10
+3 ................................................................................... 1     7.2 ....................................................................10
+4 ................................................................. 3                       7.3 ............................................................ 17
+5 ................................................................................... 4     7.4 ...........................................................................18
+
+   5.1 ...........................................................4                      8 ............................................................... 19
+   5.2 ESD .................................................................... 4           8.1 ....................................................................19
+   5.3 .............................................................. 4                     8.2 ..................................................... 19
+   5.4 .................................................................. 4                 8.3 ....................................................................19
+   5.5  .....................................................................5              8.4 ...........................................................................19
+6 ............................................................................ 6            8.5 ............................................................ 19
+   6.1 .............................................................................6       8.6 ....................................................................... 19
+   6.2 .................................................................. 6
+   6.3 ......................................................................6           9 ................................................................... 20
+   6.4 .............................................................. 9                  10 ............................................... 21
+
+2                                                                                        Copyright © 2026 Texas Instruments Incorporated
+                                                                                                          English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                          TPS631000
+
+4                                                                                       ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+                                                 VOUT  1  8  FB
+
+                                                 LX2   2  7  GND
+
+                                                 LX1   3  6  MODE
+
+                                                 VIN   4  5  EN
+
+                                            Not to scale
+
+                       4-1. 8  DRL SOT-5X3 
+
+                (1)                                        4-1. 
+
+                                                                                                    
+
+VOUT    1       PWR                              
+                PWR                              
+LX2     2       PWR                              
+                PWR                              
+LX1     3                                        
+                   I                             PFM/PWM  PWM 
+VIN     4                                        
+                   I                             
+EN      5                                        
+                PWR
+        6          I
+
+GND     7
+
+FB      8
+
+(1) PWR = I = 
+
+Copyright © 2026 Texas Instruments Incorporated                                                                    3
+                                                                                                      English Data Sheet: SLVSFH3
+                                                       Product Folder Links: TPS631000
+TPS631000                                                                                                     www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+5 
+
+5.1 
+
+(1)
+
+                                                                                                             
+                                                                                            -0.3
+              VINLX1LX2VOUTENFBMODE(2)                                                      -2.0              6    V
+VI  10ns LX1LX2(2)                                                                           -40
+                                                                                             -65              7    V
+
+TJ                                                                                                            150  °C
+
+Tstg                                                                                                          150  °C
+
+(1) """"""
+        """"
+        
+
+(2) 
+
+5.2 ESD 
+
+                                                                                                                   
+
+V(ESD)       (HBM) ANSI/ESDA/JEDEC JS-001 (1)                                                               ±1000
+             (CDM) ANSI/ESDA/JEDEC JS-002  (2)                                                                                      V
+
+                                                                                                            ±500
+
+(1) JEDEC  JEP155 500V HBM  ESD 
+(2) JEDEC  JEP157 250V CDM  ESD 
+
+5.3 
+
+
+
+                                                                                                                   
+                                                                                    1.6
+VI                                                                                  1.2              16.9     5.5  V
+                                                                                    4.2              10.6
+VO                                                                                                            5.3  V
+                                                                                   10.4                  1
+CI          VI = 1.6V  5.5V                                                        7.95                            µF
+            1.2V  VO  3.6VVO = 3.3V 
+CO          3.6V < VO  5.3VVO = 5V                                                  0.7                       330  µF
+                                                                                    -40
+                                                                                                              330  µF
+
+L                                                                                                             1.3  µH
+
+TJ                                                                                                            125  °C
+
+5.4 
+
+
+
+            (1)                                                                 TPS631000                          
+                                                                                    DRL
+RJA                                                                                8                               °C/W
+RJC(top)                                                                            132.7                          °C/W
+RJB                                                                                  43.8                          °C/W
+JT                                                                                   27.3                          °C/W
+JB                                                                                   1.2                           °C/W
+RJC(bot)                                                                             26.6                          °C/W
+                                                                                   
+
+(1)  IC 
+
+4                                                                               Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                           TPS631000
+
+                                                                                         ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+5.5 
+
+ VI = 3.8VVO = 3.3V  TJ = 25°C 
+
+
+                                                                                                      
+
+             VIN                                        VI = 3.8VV(EN) = 0V     TJ = 25°C                0.5   0.9 A
+ISD          VIN 
+             VOUT                                       VI = 2.2VVO = 3.3VV(EN) = 2.2V                   0.15  6.1 A
+IQ           UVLO 
+             UVLO                                       VI = 2.2VVO = 3.3VV(EN) = 2.2V                   8     A
+VIT+        UVLO 
+VIT-         POR                                                                                   1.5   1.55 1.599 V
+Vhys         POR 
+VI(POR)T+                                                                                          1.4   1.45 1.499 V
+VI(POR)T-   
+I/O                                                                                                99          mV
+VT+         
+VT-                                                     VI  VO                                     1.25  1.45  1.65 V
+Vhys
+IIH                                                                                                1.22  1.43  1.6 V
+
+IIL                 ENMODE                                                                         0.77  0.98  1.2 V
+
+IBais               ENMODE                                                                         0.5   0.66  0.76 V
+
+                    ENMODE                                                                               300   mV
+
+                    EN                                  V(EN) = V(MODE) = 1.5V                           ±0.01 ±0.25 µA
+                    MODE                                
+                                                        V(EN) = V(MODE) = 0V                             ±0.01 ±0.1 µA
+                    EN
+                    MODE                                V(EN) = 5.5V                                     ±0.01 ±0.3 µA
+
+                    EN
+                    MODE
+
+                                                    Q1                                                   45    m
+                                                    Q2
+rDS(on)                                                 VI = 3.8VVO = 3.3V                               50    m
+                                                    Q3   = 0.2A
+IReverse                                            Q4                                                   50    m
+                                                        VI = 0V
+IL(PEAK)     VOUT                                       VO = 3.3V                                        85    m
+IPFM_entry                                              V(EN) = 0V
+                                                                                TJ = 25°C                0.8   2 µA
+                                                                                TJ = -40°C  125°C
+                                                                                                               12 µA
+                                                                                
+            (1)     Q1                                  VO = 3.3V               VI = 3.3V          2.6   3 3.35 A
+
+                                                                                                   -0.7 -0.55 -0.45 A
+
+            (1) PFM  IO                                                                                  145   mA
+
+
+
+ []
+
+VFB                                                                                                495   500   505 mV
+
+
+
+VT+(OVP)     OVP                                                                                   5.55  5.75  5.95 V
+            
+
+VT+(IVP)     IVP                                                                                   5.55  5.75  5.95 V
+            
+
+
+
+td(EN)      EN                                                                                           0.87  1.5 ms
+            
+td(ramp)                                                                                           6.42  7.55  8.68 ms
+fSW         
+                                                                                                   1.8   2     2.2 MHz
+            
+
+(1) 
+
+Copyright © 2026 Texas Instruments Incorporated                                                                 5
+                                                                                                   English Data Sheet: SLVSFH3
+                                                        Product Folder Links: TPS631000
+TPS631000                                                                                                     www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+6 
+6.1 
+
+TPS631000 / 2MHz 
+ VIN  VOUT 
+ Q1  3A
+
+6.2 
+
+                                                                                                                         L
+
+                                               LX1           LX2
+
+VIN                                                                                                           VOUT
+
+CIN                                                                                                                 COUT
+
+        Current   Gate                                                             Gate
+        Sensor    Driver                                                           Driver
+
+                  Device                                                                Device
+                  Control                                                               Control
+
+        VIN                                    VOUT
+
+                  VMAX Switch
+
+    EN            Device Control                                                +                             FB
+MODE
+        VIN                                                                     -                +
+  GND
+                  Power Safe Mode                                                                - Ref
+                                                                                                      500 mV
+
+                  Protection                         Gate
+                                                     Driver
+
+                  Current Limit
+
+        VOUT      Buck/Boost Control
+
+                  Soft-Start
+
+        LX1, LX2
+
+6.3 
+6.3.1  (UVLO)
+
+ VIN UVLO UVLO 
+UVLO  VIN  UVLO 
+UVLO 
+
+ VIN  UVLO 
+
+
+6                                                                                  Copyright © 2026 Texas Instruments Incorporated
+                                                                                                    English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                                   TPS631000
+
+6.3.2                                                                                            ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+                                                   EN                   A  B
+
+                                                    IL(lim_SS)
+                                                     IL
+                                              95%* VOUT_TARGET
+
+VOUT
+
+                                                                td(EN)        td(RAMP)
+
+                                                                 6-1. 
+
+ UVLO  EN  1.2V TPS631000 
+ td(EN) 
+
+TPS631000  (IL(lim_SS)) 
+ td(RAMP) 
+
+
+ 6-1 
+ 6-1  A 
+ 6-1 
+ B  95% × VOUT_TARGET  B 
+
+
+6.3.3 
+
+ VOUTFB  GND  VFB 
+ R2 FB  GND  100k 1  R1 FB  VOUT 
+
+
+R1 = R2 × (VOUT / VFB - 1)                                                                       (1)
+
+ VFB  0.5V
+6.3.4  (PFM/FPWM)
+
+MODE  PFM/FPWM 
+
+ MODE  PFM 
+PFM  CCM 
+
+ MODE  PWM 
+
+
+Copyright © 2026 Texas Instruments Incorporated                                                               7
+                                                                                                 English Data Sheet: SLVSFH3
+                                                                Product Folder Links: TPS631000
+TPS631000                                                                       www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+6.3.5 
+
+ VOUT  VIN  FB 
+ VIN  VOUT 
+/
+
+6.3.6 
+
+
+
+6.3.6.1 
+
+TPS631000 
+
+
+ PWM VIN 
+ VT+(IVP)  PWM  VIN  VOUT
+ PWM 
+
+6.3.6.2 
+
+TPS631000 
+
+
+ VOUT  VT+(OVP)
+
+
+6.3.6.3 
+
+ 6-2 /
+
+    VO
+
+                                                                                     IL(PEAK)
+
+                                                                                IL
+
+                                                   6-2. 
+6.3.6.4 
+
+
+
+8                                                                               Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                      TPS631000
+
+                                                                                    ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+6.4 
+
+ VIN  UVLO  EN 
+ VIN  UVLO  EN 
+
+
+                                                                 on
+
+                                                   VI > VIT+ &&       VI < VIT± ||
+                                                 EN pin = high        EN pin = low
+
+                                                                 off
+
+                                                  6-3. 
+
+Copyright © 2026 Texas Instruments Incorporated                                                  9
+                                                                                    English Data Sheet: SLVSFH3
+                                                 Product Folder Links: TPS631000
+TPS631000                                                                                                www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+7 
+
+                                                                 
+
+ TI TI TI  
+
+
+7.1 
+TPS631000 /
+
+7.2 
+
+                                                                                                       L1
+
+                                                           1 µH
+
+     VI = 1.6 ± 5.5 V                                 LX1            LX2               VO = 3.3 V
+                       CI                            VIN            VOUT              CO
+
+                                              22 µF                                   47 µF
+
+     To/From                                         MODE           FB    R1
+     System                                                               511 k
+                                                     EN
+                                                               GND        R2
+                                                                          91 k
+
+                                                      7-1. 3.3VOUT 
+
+7.2.1                                                 7-1. 
+ 7-1 
+                                                                                                    
+                                                                                             2.7V  4.3V
+                                         
+                                                                                                  3.3V
+                                                                                                  1.5A
+
+7.2.2 
+
+ 5.3 
+
+
+7.2.2.1  WEBENCH® 
+
+ TPS631000  WEBENCH® Power Designer 
+
+1.  (VIN) (VOUT)  (IOUT) 
+2. 
+3.  (TI) 
+
+10                                                                                           Copyright © 2026 Texas Instruments Incorporated
+                                                                                                              English Data Sheet: SLVSFH3
+                                                     Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                    TPS631000
+
+                                                                                  ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+WEBENCH Power Designer 
+
+
+
+· 
+· 
+·  CAD 
+·  PDF 
+
+ WEBENCH  www.ti.com/WEBENCH
+
+7.2.2.2 
+
+
+
+· 
+· 
+· 
+· 
+
+ 7-2
+
+
+
+
+ 3 
+
+
+
+                  V -V
+Duty Cycle Boost  D = OUT IN
+                  V
+                   OUT                                                            (2)
+
+IPEAK = Iout + Vin ´ D
+                ´ (1 - D) 2 ´ f ´ L                                               (3)
+
+
+· D = 
+· f =  2.2MHz
+· L = 
+·  =  0.9
+
+                                                                        
+      
+
+TI  3
+ 20%  7-2 
+
+Copyright © 2026 Texas Instruments Incorporated                                                11
+                                                                                  English Data Sheet: SLVSFH3
+                                                 Product Folder Links: TPS631000
+TPS631000                                                                                    www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026                                                      
+                                                                                               (L × W × H
+                                                7-2. 
+                                                                                                   mm)
+ [µH]       [A]       DCR [m]                                                     (1)          2.5 × 2.0 ×
+                                                                                  MuRata
+1          4.3        42                                DFE252012P-1R0M=P2         Cyntec           1.2
+                                                                                Taiyo Yuden    2.0 × 1.6 ×
+1          4.2        43                                HTEK20161T-1R0MSR          Murata
+                                                                                                    1.0
+1          2.2        75                                MAKK2016T1R0M (2)                      2.0 × 1.6 ×
+
+1          2.0        144                               DFE18SAN1R0ME0 (2)                          1.0
+                                                                                               1.6 × 0.8 ×
+
+                                                                                                    0.8
+
+(1) 
+(2) 
+
+7.2.2.3 
+
+ IC  VOUT  PGND 
+ 47F IC 
+ IC  VOUT  PGND 
+
+ 5.3 
+/
+ 7-3 
+
+
+
+                                                7-3. 
+
+ [µF]       [V]                                ESR [m]                          (1)          
+       47        6.3                                                             Murata      0805 (2012)
+       47        10                            10       GRM219R60J476ME44        Semco       0603 (1608)
+
+                                               40       CL10A476MQ8QRN
+
+(1) 
+
+7.2.2.4 
+
+TI  22F  EMI  X5R 
+X7R  IC  VIN  PGND 
+ TPS631000 
+47µF 
+
+                                                7-4. 
+
+ [µF]       [V]                                ESR [m]                          (1)          
+       22        6.3                                                             Murata      0603 (1608)
+       10        10                            43       GRM187R61A226ME15        Murata      0603 (1608)
+
+                                               40       GRM188R61A106ME69
+
+(1) 
+
+12                                                                              Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                    TPS631000
+
+                                                                                  ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+7.2.2.5 
+
+ VOUTFB  GND 
+500mV
+
+ R2 FB  GND  100k 4  FB  VOUT 
+R1
+
+               æ VOUT ö
+R1 = R2 × ç          - 1÷
+               è VFB ø
+                                                                                      (4)
+
+
+
+· VFB = 500mV
+
+                                                  7-5. 
+
+               VOUT                              R1                               R2
+
+               2.5V                              365                              91
+
+               3.3V                              511                              91
+
+               3.6V                              562                              91
+
+               5V                                806                              91
+
+Copyright © 2026 Texas Instruments Incorporated                                                13
+                                                                                  English Data Sheet: SLVSFH3
+                                                 Product Folder Links: TPS631000
+TPS631000                                                                                                                                     www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+7.2.3 
+
+                        3.3                                                                   100
+
+                        3
+
+                        2.7                                                                   80
+
+Max Output Current (A)  2.4                                                   Efficiency (%)
+
+                        2.1                                                                   60
+
+                        1.8                                                                   40
+
+                        1.5                                                                                                                                       VIN=1.6 V
+                                                                                                                                                                  VIN=2.8 V
+                        1.2                                                                   20                                                                  VIN=3.6 V
+                                                                                                                                                                  VIN=4.2 V
+                        0.9                                                                                                                                       VIN=5.5 V
+
+                        0.6                                                                    0                0.001     0.01 0.05 0.2 0.5 1 2 3 45
+                                                                                              0.0001                   Output Current (A)
+                        1.5       2  2.5      3  3.5  4          4.5  5  5.5
+                                                                                                                                          MODE = 
+                                              Input Voltage (V)
+
+                                              VOUT = 3.3V                                          VOUT = 3.3V
+
+                           7-2.                                                                      7-3.  (FPWM)
+
+                        3.3                                                                   100
+
+                        3.28                                                                  95
+
+Output Voltage (V)                                                            Efficiency (%)  90
+
+                        3.26
+
+                                                                                              85
+
+                        3.24      VIN=1.6V                                                    80                                                                  VIN=1.6 V
+                                  VIN=2.8V                                                                                                                        VIN=2.8 V
+                        3.22      VIN=3.6V                                                    75                                                                  VIN=3.6 V
+                                  VIN=4.2V                                                                                                                        VIN=4.2 V
+                         3.2      VIN=5.5V       0.01 0.05 0.2 0.5 1 2 3 45                   70                0.001                                             Vin=5.5V
+                          0.0001              Output Current (A)                              0.0001
+                                       0.001                                                                              0.01 0.05 0.2 0.5 1 2 3 45
+                                                                 MODE =                                                Output Current (A)
+                              VOUT = 3.3V                                                          VOUT = 3.3V
+                                                                                                                                          MODE = 
+
+                                       7-4.  (FPWM)                                                 7-5.  (PFM)
+
+                        3.28      VIN=1.6V                                                    Vout(3.3V o set)
+                        3.26      VIN=2.8V                                                        20mV/div
+                                  VIN=3.6V
+Output Voltage (V)                VIN=4.2V
+                                  Vin=5.5V
+
+                        3.24                                                                    LX1
+                                                                                              2.0V/div
+
+                                                                                                  LX2
+                                                                                               2.0V/div
+
+                        3.22
+
+                                                                                              Inductor Current
+                                                                                                 500mA/div
+
+                        3.2          0.001       0.01 0.05 0.2 0.5 1 2 3 45                                            Time Scale: 200ns/div
+                         0.0001               Output Current (A)
+
+                                                                 MODE =                       VIN = 2.7VVOUT = 3.3V    IOUT = 1AMODE = 
+
+                                  VO = 3.3V
+
+                                                                                               7-7.  1A 
+
+                                      7-6.  (PFM)
+
+14                                                                                                                     Copyright © 2026 Texas Instruments Incorporated
+                                                                                                                                        English Data Sheet: SLVSFH3
+                                                                      Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                              TPS631000
+
+7.2.3                                                                                       ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+                  Vout(3.3V o set)                         Vout(3.3V o set)
+                      20mV/div                                 20mV/div
+
+  LX1                                                        LX1
+2.0V/div                                                   2.0V/div
+
+    LX2                                                      LX2
+ 2.0V/div                                                  2.0V/div
+
+Inductor Current                                           Inductor Current
+   500mA/div                                                  500mA/div
+
+                                    Time Scale: 200ns/div                                   Time Scale: 200ns/div
+
+VIN = 3.3VVOUT = 3.3V               IOUT = 1AMODE =        VIN = 3.6VVOUT = 3.3V            IOUT = 1AMODE = 
+
+            7-8. 1A                                                                          7-9. 1A 
+
+Vout(3.3V o set)                                           Vout(3.3V o set)
+    20mV/div                                                   20mV/div
+
+  LX1                                                          LX1
+2.0V/div                                                    2.0V/div
+
+  LX2                                                           LX2
+2.0V/div                                                     2.0V/div
+
+Inductor Current                                            Inductor Current
+   500mA/div                                                   500mA/div
+                                                                                             Time Scale: 2.0ms/div
+                                    Time Scale: 200ns/div
+                                                           VIN = 3.6VVOUT = 3.3V IOUT = 1mAMODE = 
+VIN = 4.3VVOUT = 3.3V               IOUT = 1AMODE = 
+                                                                       7-11.  1mA 
+ 7-10.  1A 
+                                                               EN
+   EN                                                      2.0V/div
+2.0V/div
+                                                              Vout
+  Vout                                                     2.0V/div
+2.0V/div
+                                                               LX1
+                                                            2.0V/div
+
+  LX1
+2.0V/div
+
+Inductor Current                                           Inductor Current
+   500mA/div                                                   500mA/div
+                                                                                            Time Scale: 500 s/div
+                                    Time Scale: 5.0ms/div
+                                                           VIN = 3.6VVOUT = 3.3V Rload = 4MODE = 
+VIN = 3.6VVOUT = 3.3V Rload = 4MODE = 
+                                                                                 7-13.  EN 
+                   7-12.  EN 
+
+Copyright © 2026 Texas Instruments Incorporated                                                          15
+                                                                                            English Data Sheet: SLVSFH3
+                                                           Product Folder Links: TPS631000
+TPS631000                                                                                              www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026  Vout(3.3V o set)
+                                                   50mV/div
+7.2.3  
+
+                 Vout(3.3V o set)
+                     200mV/div
+
+  LX1                                             LX1
+5.0V/div                                       5.0V/div
+
+   LX2                                           LX2
+5.0V/div                                       5.0V/div
+
+Inductor Current                               Inductor Current
+     1.0A/div                                       1.0A/div
+
+                  Time Scale: 100 s/div                                         Time Scale: 5.0ms/div
+
+VIN = 2.7VVOUT = 3.3V  IOUT = 100mA  1A20µs    VIN = 2.7VVOUT = 3.3V            IOUT = 100mA  1A 
+                                        
+
+                                                7-15.  2.7V 
+
+ 7-14.  2.7V 
+
+Vout(3.3V o set)                               Vout(3.3V o set)
+   200mV/div                                       50mV/div
+
+  LX1                                            LX1
+5.0V/div                                       5.0V/div
+
+   LX2                                            LX2
+5.0V/div                                       5.0V/div
+
+Inductor Current                               Inductor Current
+     1.0A/div                                       1.0A/div
+
+                  Time Scale: 100 s/div                                         Time Scale: 5.0ms/div
+
+VIN = 3.6VVOUT = 3.3V  IOUT = 100mA  1A20µs    VIN = 3.6VVOUT = 3.3V            IOUT = 100mA  1A 
+                                        
+
+                                                7-17.  3.6V 
+
+ 7-16.  3.6V 
+
+Vout(3.3V o set)                               Vout(3.3V o set)
+   200mV/div                                       50mV/div
+
+  LX1                                              LX1
+5.0V/div                                        5.0V/div
+
+   LX2                                             LX2
+5.0V/div                                        5.0V/div
+
+Inductor Current                               Inductor Current
+     1.0A/div                                       1.0A/div
+
+                  Time Scale: 100 s/div                                         Time Scale: 5.0ms/div
+
+VIN = 4.3VVOUT = 3.3V  IOUT = 100mA  1A20µs    VIN = 4.3VVOUT = 3.3V            IOUT = 100mA  1A 
+                                        
+
+                                                7-19.  4.3V 
+
+ 7-18.  4.3V 
+
+16                                                                              Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                      TPS631000
+
+7.2.3                                                                                 ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+                      Vin                                                     Vin
+                   1.0V/div                                                1.0V/div
+
+                  Vout(3.3V o set)                                        Vout (3.3V o set)
+                      50mV/div                                                50mV/div
+
+    Inductor Current                                                      Inductor Current
+       500mA/div                                                             500mA/div
+
+                                    Time Scale: 500 s/div                                     Time Scale: 100ms/div
+
+VIN = 2.7V  4.3V20µs                                       IOUT = 1A      VIN = 2.7V  4.3V                           IOUT = 1A
+      VOUT = 3.3V                                                                  VOUT = 3.3V
+
+                7-20.  1A                                                             7-21.  1A 
+
+      Vout                                                                  Vout
+    2.0V/div                                                              2.0V/div
+
+      LX1                                                                   LX1
+    2.0V/div                                                              2.0V/div
+
+        LX2                                                                   LX2
+     2.0V/div                                                              2.0V/div
+
+    Inductor Current                                                      Inductor Current
+         1.0A/div                                                              1.0A/div
+
+                                    Time Scale: 10 s/div                                      Time Scale: 1.0ms/div
+
+    VIN = 3.6VVOUT = 3.3V                                  IOUT = 1AFPWM  VIN = 3.6VVOUT = 3.3V                      IOUT = 1AFPWM
+
+                7-22.                                                                          7-23. 
+
+                                                            7-6. VOUT = 3.3V 
+
+                                    (2)                                                                                (1)
+                                                                                                                      (TI)
+U1              1.5A /                                                    TPS631000
+                                                                                                                        MuRata
+L1             1.0µH2.5mm × 2.0mm4.3A42m                                  DFE252012P-1R0M=P2                             Murata
+                                                                                                                         Murata
+C1             22µF0603±20%6.3V                                           GRM187R61A226ME15
+                                                                                                                          
+C2             47µF0805±20%6.3V                                           GRM219R60J476ME44                               
+
+R1             511k0603 1%100mW                                           
+
+R2             91k0603 1%100mW                                            
+
+(1) 
+(2)  7-5 
+
+7.3 
+
+TPS631000  TPS631000 
+
+
+Copyright © 2026 Texas Instruments Incorporated                                                               17
+                                                                                                 English Data Sheet: SLVSFH3
+                                                           Product Folder Links: TPS631000
+TPS631000                                                                       www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+7.4 
+7.4.1 
+
+PCB  TPS631000 
+
+·  IC 
+    
+
+·  FB  LX1  LX2 
+
+7.4.2 
+
+                                                7-24. 
+
+18                                                                              Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                    TPS631000
+
+                                                                                  ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+8 
+8.1 
+
+8.1.1 
+
+TI 
+ TI 
+
+8.1.2 
+
+8.1.2.1  WEBENCH® 
+
+ TPS631000  WEBENCH® Power Designer 
+
+1.  (VIN) (VOUT)  (IOUT) 
+2. 
+3.  (TI) 
+
+WEBENCH Power Designer 
+
+
+
+· 
+· 
+·  CAD 
+·  PDF 
+
+ WEBENCH  www.ti.com/WEBENCH
+
+8.2 
+
+ ti.com  
+
+
+8.3 
+
+TI E2ETM 
+
+
+"" TI  TI 
+TI 
+
+8.4 
+TI E2ETM is a trademark of Texas Instruments.
+WEBENCH® is a registered trademark of Texas Instruments.
+
+8.5 
+
+                         (ESD)  (TI) 
+                        
+                        ESD 
+                        
+
+8.6            
+TI 
+
+Copyright © 2026 Texas Instruments Incorporated                                                19
+                                                                                  English Data Sheet: SLVSFH3
+                                                 Product Folder Links: TPS631000
+TPS631000                                                                       www.ti.com.cn
+
+ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+9 
+
+
+
+Changes from Revision B (June 2022) to Revision C (August 2026)                 Page
+
+· " 10ns LX1LX2" -0.3  -2.......................... 4
+·  CDM "JEDEC  JESD22C101""ANSI/ESDA/JEDEC JS-002"............................... 4
+
+Changes from Revision A (January 2022) to Revision B (June 2022)                Page
+
+· "PSM"................................................................................................................................... 7
+·  7-2 .................................................................................................................................................... 11
+·  7-6 ....................................................................................................................................................14
+
+Changes from Revision * (October 2021) to Revision A (January 2022)             Page
+
+· """"................................................................................................1
+
+20                                                                              Copyright © 2026 Texas Instruments Incorporated
+                                                                                                 English Data Sheet: SLVSFH3
+                                               Product Folder Links: TPS631000
+www.ti.com.cn                                                                                                                    TPS631000
+
+                                                                                  ZHCSP59C - OCTOBER 2021 - REVISED AUGUST 2026
+
+10 
+
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this datasheet, see also the left-hand navigation.
+
+Copyright © 2026 Texas Instruments Incorporated                                                21
+                                                                                  English Data Sheet: SLVSFH3
+                                                 Product Folder Links: TPS631000
+www.ti.com                                                                                                                                                   PACKAGE OPTION ADDENDUM
+
+                                                                                                                                                                                                                            14-Aug-2026
+
+PACKAGING INFORMATION
+
+Orderable part number  Status   Material type  Package | Pins        Package qty | Carrier  RoHS                   Lead finish/        MSL rating/                                       Op temp (°C)  Part marking
+                                                                                                                   Ball material       Peak reflow
+                           (1)            (2)                                                  (3)                                                                                         -40 to 125            (6)
+                                                                                                                             (4)                   (5)                                     -40 to 125
+ TPS631000DRLR         Active   Production     SOT-5X3 (DRL) | 8     4000 | LARGE T&R        Yes                                                                                                            2N4W
+TPS631000DRLR.A        Active   Production     SOT-5X3 (DRL) | 8     4000 | LARGE T&R        Yes                    Call TI | Sn  Level-1-260C-UNLIM                                                        2N4W
+
+                                                                                                                         SN       Level-1-260C-UNLIM
+
+(1) Status: For more details on status, see our product life cycle.
+
+(2) Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+                                                                     Addendum-Page 1
+                                                                      PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                                    14-Aug-2026
+
+TAPE AND REEL INFORMATION                                                TAPE DIMENSIONS
+                                                                      K0 P1
+         REEL DIMENSIONS
+
+                                                                                                                             B0 W
+
+                                Reel
+                             Diameter
+
+                                                                      Cavity  A0
+
+                                                    A0 Dimension designed to accommodate the component width
+                                                    B0 Dimension designed to accommodate the component length
+                                                    K0 Dimension designed to accommodate the component thickness
+                                                    W Overall width of the carrier tape
+                                                    P1 Pitch between successive cavity centers
+
+                                          Reel Width (W1)
+                             QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                                             Sprocket Holes
+
+                                       Q1 Q2              Q1 Q2               User Direction of Feed
+                                       Q3 Q4              Q3 Q4
+
+                                                    Pocket Quadrants
+
+*All dimensions are nominal  Package Package  Pins  SPQ      Reel Reel         A0    B0                                       K0    P1   W    Pin1
+             Device            Type Drawing         4000  Diameter Width      (mm)  (mm)                                     (mm)  (mm)
+
+                                                            (mm) W1 (mm)      2.75   1.9                                      0.8   4.0  (mm) Quadrant
+
+TPS631000DRLR SOT-5X3 DRL 8                               180.0       8.4                                                                8.0  Q3
+
+                                                    Pack Materials-Page 1
+www.ti.com                                         PACKAGE MATERIALS INFORMATION
+ TAPE AND REEL BOX DIMENSIONS
+                                                                                                                                                 14-Aug-2026
+
+                                                   Width (mm)
+
+                                                                      H
+
+W                                               L
+
+*All dimensions are nominal  Package Type  Package Drawing Pins  SPQ     Length (mm)  Width (mm)  Height (mm)
+              Device            SOT-5X3                          4000         210.0       185.0        35.0
+                                           DRL     8
+      TPS631000DRLR
+
+                                                Pack Materials-Page 2
+DRL0008A                                                                       PACKAGE OUTLINE
+
+                                               B                            SOT-5X3 - 0.6 mm max height
+                                    PIN 1
+                                ID AREA                  SCALE 8.000
+
+                                              1                                                                     PLASTIC SMALL OUTLINE
+                                   6X 0.5
+                                                  1.3
+                          2X 1.5                  1.1
+
+                                               4                                   A
+                          8X 0.27 0.17
+                   0.1 C A B                                               8
+                   0.05
+                                                               2.2
+                             0.6 MAX                           2.0
+                                                            NOTE 3
+                                  0.18
+                                  0.08                   5
+
+                                     8X 0.4 0.2     1.7                               2X 0 -10           0.05
+                                                    1.5
+                                                                                                         0.00
+                                                  SYMM
+                                                            2X 4 -15
+
+                                                                                      C
+                                                                                          SEATING PLANE
+                                                                                         0.05 C
+
+        SYMM
+
+                                                                                                               4224486/G 11/2024
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, interlead flash, protrusions, or gate burrs shall not
+
+   exceed 0.15 mm per side.
+4.Reference JEDEC Registration MO-293, Variation UDAD
+
+                                                         www.ti.com
+DRL0008A                                      EXAMPLE BOARD LAYOUT
+
+                                                   SOT-5X3 - 0.6 mm max height
+
+                                                                                   PLASTIC SMALL OUTLINE
+
+                       8X (0.67)
+
+                                  SYMM
+
+          8X (0.3) 1                                   8
+
+                                                                                                   SYMM
+
+          6X (0.5)
+
+                                                                                                5
+                       4
+
+          (R0.05) TYP
+
+                                  (1.48)
+
+                       LAND PATTERN EXAMPLE
+
+                            EXPOSED METAL SHOWN
+                                       SCALE:30X
+
+0.05 MAX                                  0.05 MIN
+AROUND                                    AROUND
+
+EXPOSED                                   EXPOSED
+    METAL                                     METAL
+
+SOLDER MASK            METAL              METAL UNDER                                                    SOLDER MASK
+OPENING                                   SOLDER MASK                                                    OPENING
+
+          NON SOLDER MASK                              SOLDER MASK
+                  DEFINED                                  DEFINED
+
+              (PREFERRED)
+
+                           SOLDERMASK DETAILS
+
+                                                                                                                4224486/G 11/2024
+
+NOTES: (continued)
+
+5. Publication IPC-7351 may have alternate designs.
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+7. Land pattern design aligns to IPC-610, Bottom Termination Component (BTC) solder joint inspection criteria.
+
+                                  www.ti.com
+DRL0008A                                                EXAMPLE STENCIL DESIGN
+
+                                                              SOT-5X3 - 0.6 mm max height
+
+                                                                                               PLASTIC SMALL OUTLINE
+
+                                 8X (0.67)  SYMM
+
+                    8X (0.3) 1                                  8
+
+                                                                                                              SYMM
+
+                    6X (0.5)
+
+                                                                                                           5
+                                 4
+
+                    (R0.05) TYP             (1.48)
+
+                                 SOLDER PASTE EXAMPLE
+
+                                 BASED ON 0.1 mm THICK STENCIL
+                                                  SCALE:30X
+
+                                                                                                                    4224486/G 11/2024
+
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations.
+
+9. Board assembly site may have different recommendations for stencil design.
+
+                                            www.ti.com
+                                                
+
+TI""
+
+ TI (1)  TI (2) 
+(3) 
+TI  TI 
+ TI  TI 
+TI 
+TI  TI )TI   ti.com  TI TI 
+ TI  TI   (TI) 
+
+TI 
+IMPORTANT NOTICE
+
+                                                                     © 2026 (TI) 
+
+                                                                         2025  10 
+

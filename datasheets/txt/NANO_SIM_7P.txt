@@ -1,0 +1,377 @@
+                                                        CRICUIT DIAGRAM FOR CARD DETECT SWITCH
+
+                                                        CARD DETECT SWITCH
+                                                                   (CD)
+
+                           °--CD                                                NORMAL......SHORT  A0  NEW RELEASE                                        07/15/22
+
+                                                        GND INSERTING CARD......OPEN
+
+                     ° C3 C7 C2 C6 C1 C5                                                                         C3 C7 C2 C6 C1 C5
+                     " GND                                                                                                                      CD GND
+                     «¿...... GND        GND
+                                                                                                       GND
+
+                                                                                                                          
+
+                     --,,«¸ Temperature ThermoplasticGND                                               GND
+                                                                                                                                                     GND
+
+Notes:                                                                                                 RECOMMENDED PCB LAYOUT
+   1.Material:
+      Housing: High                                                                                        TOLERANCE:±0.05
+
+Terminal:Copper Alloy                                                                                        SMT SOLDER AREA
+
+Shell: Stainless Steel                                                                                       COPPER RESTRICTED AREA
+                                                                                                             1.TOUCH AREA OF CONTACT
+2.Plating:                                                                                                   TIPS NO ELECTRICAL FUNCTION
+   Terminal:50u" Ni Underplated Overall                                                                      2.NO FIRST PCB_LAYOUT
+   G/F Plated On Contact Area                                                                                CIRCUITS IN THE AREA
+
+                                                                            2:1
+
+G/F Plated On Solder Area
+
+Sheel:30u" Ni Underplated Overall                                                                      °--°"«¿...... --,,«¸
+
+   G/F Plated On Contact Area And older Area                                PIN/NO ASSIGNMENT
+3.Technical Speciality:
+                                                                            C1   VCC
+   Rated Voltage: 30V
+   Current Rating: 0.5A                                                     C2   RST                   NANO SIM 7P H1.37
+   Insulation Resistance:1000M Min.
+   Contact Resistance:100m Max.                                             C3   CLK                      1/2             ·"·                             2025.5.28
+   Withstanding Voltage: 500V DC For 1 Minutes.                                                                           »"»"                            2025.5.28
+   Operating Temperature: -40+75 Humidity 80% R.H Max.                      C5   GND                                      ´--¢                            2025.5.28
+
+                                                                            C6   VPP
+
+                                                                            C7   I/O
+
+                                                                            CD Detect Switch
+             
+
+                            SHENZHEN SHOUHAN TECHNOLOGYCO.,LTD
+
+                          Tel: 0755-27597601 Fax: 0755-27597491
+
+           
+
+SPECIFICATION FOR APPROVAL
+
+oe· - ´º
+
+Material code:
+,,«¸  Project
+--  Part No              S IM ¿¤ ø
+
+                         NANO SIM 7P H1.37
+...  Approval signatures
+°--°"«¿... /Drawn
+ /Part No.                /Signatures
+
+                          Date:
+
+                
+
+/Check          »"»"
+
+/Approved 
+
+                      1
+                
+
+1 . SCOPE     
+
+       This product specification defines the product performance and the test methods to ascertain the
+        performance of the S I M ., which is designed and manufactured by Company.
+                         SIM                .
+
+2. REFERENCE DOCUMENTS
+
+       MIL-STD-1344A Test method for electrical connector 
+       MIL-STD-202F Test method for electrical components 
+       EIA364 Test method for electrical components 
+       JIS C 0051 Test method for electrical components 
+       MIL-G-45204C Specification for gold plating 
+       IEC-512-3 IEC standard for current carrying capacity testsIEC
+       QQ-N-290A Specification for nickel plating 
+       MIL-P-81728A Specification fortin/lead plating 
+       MIL-T-10727B Specification fortin plating 
+       UL498 UL standard for safety of attachment plug and receptacleUL
+       EN/ISO5961 Determination of total lead & cadmium content ( )
+       EN1122 Determination of total lead & cadmium content ( )
+       EN13346 Determination of heavy metals content ( )
+       EPA3052 Determination of total lead & cadmium content ( )
+
+3. FEATURE & DIMENSIONS 
+
+ ¸ 3.1. PRODUCT DIME NS ION  
+  « These connectors shall have the dimensions as shown in customer drawing
+  ,,               
+  3 . 2 . PCB/ PANEL LAYOUT         
+
+               The recommended PCB layout is shown in customer drawing
+                     PCB layout      
+
+ -- 3 . 3 . MATERIAL    
+               The harmful material can follow the requirement of RoHS.
+                         RoHS     
+
+ ... 3. 4 . MEC H AN I C A L & EL E C T R I C A L CH AR A C T ER I S T I C   
+               The connectorshall have the mechanical and electrical performance as described in table I
+               I
+
+ ... 3.5. PACKAGING 
+   Products shall be packaged according to requirements specified in purchase order for safe
+
+               delivery. Products required tray or carrier tape should meet the proper specification per
+
+  ¿ purchase order. Connector container and the packagin g specification is shown in customer
+
+               drawing
+
+  «                                 
+ " 3 . 6 . MARKING   
+  ° Manufacturer 's name, industry recognized logo, or customer approved marks
+
+               
+
+      3.7.TRANSPORTATION 
+
+  -- Any vehicle can be adopted for the transportation, but moisture-proof and no mechanical
+  °damage.
+
+               
+
+      3.8.STORAGE 
+
+            Temperature: -25~+85, Relative humidity: 80%Not to storage in corrosive environments A re-
+            qualification testshall be conducted immediately while the storage duration exceed 6 months.
+             -25~+85;  80%6 
+
+4. ENVIRONMENTAL 
+
+      4.1. SOLDERABILITY
+
+           Connector's solderability can meet MIL-STD-202F standard. Finish shall be free of contaminants.
+                  MIL- STD- 2 0 2 F                   .
+                             
+
+4.2. RESISTANCE TO SOLDER HEAT 
+
+       4 . 2 . 1 . Wave Soldering     
+                Consists of three consecutive phases.            
+
+4. 2 . 1 . 1 . Preheat   
+        Increase in temperature not to exceed 4per second. Final preheat temperature will be within
+        1 2 5  of solder temperature.        4  /            1 2 5  .
+
+4 . 2 . 1 . 2 . Soldering   
+
+Device leads will be exposed to solder wave at 250for a maximum of 5 seconds. 
+
+2505.
+
+4. 2 . 1 . 3 . Cool Down   
+       Cool down in ambient air at approximately 2 0  to 2 5  .          2 0  ~ 2 5  . 4 . 2 . 2 .
+
+INFRARED REFLOW        
+        Three cycles. Each cycle consisting of three consecutive phased.   
+
+        
+
+4. 2 . 2 . 1 . Preheat   
+
+Increase in temperature not to exceed 4 per second. 4 /
+
+4 . 2 . 2 . 2 . Soldering   
+
+¸ 4. 2.2.3 . Cool Down 
+ « Cool down shall not exceed 6  per second.        6  /  . Note:    Device
+
+        temperature measurements are referenced from the top-center of the package outer surface.
+
+ ,,          
+Maximum allowable time above reflow temperature of 183  is 90 seconds. Maximum
+temperature in this interval is 2 6 0  , not to exceed 1 0 seconds.      1 8 3         
+ 90. 26010.
+
+ 4. 3 . CLEANING                                                                                      
+
+        Connectors resist to cleaning process. Aqueous Cleaning: Three cycles; each cycle consisting
+-- of 30 psi; followed by air drying for 60to 90 seconds at 93 to 121 .
+
+.    3054  -66
+ 93~12160 90
+of a maximum of one minute exposure to 54 to 66 demineralized tap water at a maximum pressure
+
+... 5 . PERFORMANCE AND TEST DESCRIPTION       
+
+      5 . 1 . REQUIREMENT   
+
+              Product is designed to meet electrical, mechanical, and environmental performance
+
+  ... requirements specified in Table I.
+                          .
+
+      5 . 2 . TEST CONDITION      
+
+  ¿ Unless otherwise specified, all tests shall be performed at ambient environmental conditions.
+
+              
+
+ « 5 . 3 . SAMPLE SELECTION      
+  " Test samples shall be selected at random from current production. No test samples shall be reused. Samples
+  ° are pre-conditioned with 10cycles of durability. Each group shall be containing 5 test samples.
+
+              . 10 5
+              
+°-- 6. QUALITY ASSURANCE PROVISIONS 
+      Company is responsible for the quality of the part as it is delivered to customer. Failing lots will be return or other
+
+supplier corrective action.
+
+ 
+                       
+
+           Items                     Requirements                                Test Methods
+1.Confirmation of      Productshall be conforming to
+Product                the requirements of applicable     Visually, dimensions and functionally
+                       product drawing.                   inspected per applicable product drawing.
+                                                          
+                       
+
+2. Contact resistance  100m Max. initial                  Subject mated contacts assembled in housing
+(Low Level)            100 m  .                           to closed circuit of 10 mA max. at open circuit
+                                                          voltage of 2 0 mV max.          
+                       1 0 0 0 M  Min. 5 0 0 M                            1 0 mA 
+                                                           2 0 mV max. 
+3. Insulation
+resistance                                                Measure by applying test potential between
+                                                          the adjacent contacts, and between the
+                                                          contacts and ground in the mated connector.
+                                                          MIL-STD-202, Method 302, Condition B (500
+                                                          V DC± 1 0 % ) .              
+                                                                  MIL- STD- 2 0 2 ,   3 0 2  
+                                                           B (5 0 0 V DC± 10 % ) 
+
+                       Connector must withstand test Measure by applying test potential between
+
+                       potential of 500 V AC for 1        the adjacent contacts, and between the
+                       minute. Current leakage must       contacts and ground in the mated connector.
+                       be 1 . 0 mA max. .                 MIL- STD- 2 0 2 , Method 3 0 1 .        
+                          5 0 0 V AC                        MIL-STD-202 
+                             1 . 0 mA.                     301 
+
+                       Contact Resistance: 100 m           Mate and unmate connector for 1500 cycle .
+                       Max. after testing                  1500
+                       100 m
+                                                          Carry rated current load.0.3A per contact.
+                       3 0 ° C Max.    3 0 ° C              UL4 9 8        0 . 3 A     UL4 9 8 
+4. Dielectric Strength
+                                                          Subject mated connector to 10-55-10 Hz
+                                                          traversed in 1 minute at 1.5 mm amplitude 2
+,,«¸ 5. Durability (Repeated                              hours each of 3 mutually perpendicular plane,
+ Mating/Unmating)                                         10 mA applied MIL-STD-202, Method 201. 
+                                                                        1 0 - 5 5 - 1 0 Hz 
+                                                            1. 5 mm              
+                                                          2   10 mA 
+6. Temperature rise                                       MIL- STD- 2 0 2    2 0 1 
+
+--                                                        Applying an appropriate holder is allowed in
+7.Vibration                                               vibration test and shock test. MIL-STD-202,
+Sinusoidal Low                                            Method 2 1 3 , 4 9 0 m / s 2 , 3 axes.       
+                                                                 . MIL- STD - 2 0 2    2 1 3  
+... Frequency                                             490m/s2
+... 
+                       No electrical discontinuity        Temperature range from -55°C to +85°C .Start
+                                                          from -55°C. After 30 min. change to +85°C,
+                       greater then 1 sec (s) shall       change time is no more than 30 seconds .
+                       occur. Contact resistance:100      Total 5 cycles. MIL-STD-202, Method
+                       m  max.        1                    107D,condition A.  -55°C~
+                       sec (s)                            +85°C  -55°C  30 
+                       100 m 
+°"«¿ 8. Shock 
+-- 9. Thermal shock    No electrical discontinuity
+°                      greater than 1 sec. shall
+                       occur. No damage to product.
+                              1  sec ( s ) 
+                       
+
+                       No damage, Contact
+
+                       Resistance (Low Level) (Final)
+                       1 0 0 m  max.        
+
+                        100 m                             +85°C  30 5 
+
+                                                           MIL-STD-202 107D A
+
+10. Humidity           No damage, Contact Resistance      Temperature :40±2 °C 96 hours. Relative
+                       (Low Level) (Final) 100 mmax . .   humidity: 90-95%; Duration: 96 Hours.
+                       Dielectric Strength should be OK,
+                       Insulation Resistance should       MIL- STD- 2 0 2 , Method 1 0 3 ,    4 0 ± 2 ° C
+                       be 1 0 0 M  min.                   96   90-95%  96 
+                        100 m                               MIL- STD- 2 0 2    1 0 3 
+                          OK,     1 0 0 M  
+
+                       
+                    
+
+             Items                Requirements                                 Test Methods
+
+11.Solderability    Appearance of the specimen         Soldering time: 3 to 5 Seconds Temperature:
+                    shall be inspected after the test  250±5°C.  3~5  250±
+                    with the assistance of a           5°C
+                    magnifier capable of giving a
+                    magnification of 10 X for any
+                    damage such as pinholes, void
+                    or rough surface. 
+
+                    10 
+
+                    
+
+                    
+
+12.Resistance to    No damage                          Leave subject product in the 215±5°C
+soldering heat                                         chamber for 2 minutes. 215±5°C 
+                                                       2 
+
+13. Salt Spray      Contact Resistance (Low            5±1% salt concentration 24±4 hours 35±
+                    Level) (Final) 100 mmax.           2°C MIL-STD-202, Method 101 Condition B.
+                       (   ) 1 0 0 m  max.               5±1%24
+                                                       835±2°C
+                                                       MIL- STD- 2 0 2    1 0 1    B 
+
+14.High temperature Contact resistance: 100 m          Subject product to 85±2°C for 96 hours
+
+                    max. 100 mmax.                     continuously. MIL-STD-202, Method 108. 
+                                                       85 ±2°C 96 
+                                                       MIL-STD-202, 108
+¸ R E F L O W S O L D E R I N G P R O F I L E
+« Pb -f r e e re f lo w pr o f i le req u i r eme n ts:Reference     Specification
+                                                                         2.5°C/s
+     ,, P a r a m e t e r                                tsoak
+ Average tem perature gradient in                           t1       2-3 minutes
+                                                            t2              60 s
+     preheating                                             t3              50 s
+   Soak time                                                                 5s
+                                                        Tpeak
+-- Tim e above 217 °C                                             250°C (+5/-0°C)
+                                                                      Max -5°C/s
+   Time above 230°C
+
+   Time above 255°C
+   Peak temperature in reflow
+
+°--°"«¿...... Temperature gradient in cooling
+
+This profile is the minimum requirement for evaluating soldering heat resistance of
+
+components. Heat transfer method used for reflow soldering is hot air convection. The
+actual air temperatures used to achieve the specified profile is higher and largely
+dependent on the reflow equipment.
+

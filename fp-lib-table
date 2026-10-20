@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "project")(type "KiCad")(uri "${KIPRJMOD}/lib/footprints.pretty")(options "")(descr "Hand-made project footprints"))
+	(lib (name "espressif")(type "KiCad")(uri "${KIPRJMOD}/lib/espressif.pretty")(options "")(descr "Official Espressif footprints (vendored)"))
+	(lib (name "lcsc")(type "KiCad")(uri "${KIPRJMOD}/lib/lcsc.pretty")(options "")(descr "Imported from LCSC/EasyEDA"))
+)

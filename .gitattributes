@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.step binary
+*.STEP binary
+*.wrl binary
+*.pyd binary
