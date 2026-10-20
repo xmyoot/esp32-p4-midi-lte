@@ -26,7 +26,7 @@ ANCHORS = {  # ref: (x, y, rot)   board origin top-left, +y toward the USB (bott
     # Wi-Fi module top-right, antenna end on the east edge; microSD slot on the west edge
     "U3": (66.3, 20.0, 270), "J3": (9.9, 21.0, 270),
     # modem bottom-right, U.FLs at its antenna pins, LTE switch at its VBAT pins
-    "U4": (53.5, 48.0, 0), "J5": (72.6, 59.0, 0), "J6": (72.6, 40.0, 0), "J7": (47.5, 29.8, 0), "U9": (41.5, 67.4, 0),
+    "U4": (53.5, 48.0, 0), "J5": (72.6, 59.0, 0), "J6": (72.6, 40.0, 0), "J7": (47.6, 29.8, 0), "U9": (41.5, 67.4, 0),
     # service edge (bottom): nano-SIM slot, USB-C; battery on the west edge; buttons by the USB
     "J4": (29.8, 61.3, 0), "U18": (29.8, 51.6, 0), "J1": (16.5, 66.0, 0), "U17": (16.5, 58.5, 0), "D201": (16.5, 55.3, 0),
     "J8": (5.4, 50.0, 90), "SW301": (5.0, 58.0, 0), "SW302": (11.2, 58.0, 0),
