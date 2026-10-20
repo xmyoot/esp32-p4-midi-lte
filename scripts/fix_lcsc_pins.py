@@ -73,3 +73,42 @@ def fix_footprints():
 
 if __name__ == "__main__":
     fix_footprints()
+
+
+def trim_silk():
+    """Delete footprint silk items that touch the footprint's own pads/holes (imported art draws over them).
+    Text-level edit: KiCad 10's Python FootprintSave binding is unavailable."""
+    import math as _m, re as _re
+    lib = LOCAL_LIBS["lcsc"].with_suffix(".pretty")
+    num = r"(-?[\d.]+)"
+    for name in ("SW-SMD_L4.0-W2.9-P4.15-EH", "TF-SMD_TF-01A", "SIM-SMD_NANO-SIM-7P-H1.37"):
+        f = lib / f"{name}.kicad_mod"
+        lines, pads = f.read_text(encoding="utf-8").splitlines(), []
+        for l in lines:
+            m = _re.search(r"\(pad .*?\(at " + num + " " + num + r".*?\(size " + num + " " + num, l)
+            if m:
+                x, y, w, h = map(float, m.groups()); r = max(w, h) / 2 + 0.15
+                pads.append((x - r, y - r, x + r, y + r))
+
+        def hits(x0, y0, x1, y1):
+            return any(x0 < b[2] and b[0] < x1 and y0 < b[3] and b[1] < y1 for b in pads)
+        keep, n = [], 0
+        for l in lines:
+            if "F.SilkS" in l:
+                pts = [tuple(map(float, q)) for q in _re.findall(r"\((?:start|end|center) " + num + " " + num + r"\)", l)]
+                box = None
+                if l.lstrip().startswith(("(fp_arc", "(fp_circle")) and len(pts) >= 2:
+                    (cx, cy), (ex, ey) = pts[0], pts[1]; r = _m.hypot(ex - cx, ey - cy)
+                    box = (cx - r, cy - r, cx + r, cy + r)
+                elif pts:
+                    xs, ys = [q[0] for q in pts], [q[1] for q in pts]; box = (min(xs), min(ys), max(xs), max(ys))
+                if box and hits(*box):
+                    n += 1; continue
+            keep.append(l)
+        f.write_text("\n".join(keep) + "\n", encoding="utf-8"); print(f"{name}: removed {n} silk items over pads")
+
+
+if __name__ == "__main__":
+    trim_silk()
+
+

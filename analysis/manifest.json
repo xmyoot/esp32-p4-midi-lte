@@ -18,15 +18,17 @@
     },
     "2026-10-19_2151": {
       "source_hashes": {
-        "esp32p4_lte_cam.kicad_sch": "sha256:37d3ceee33e7bca6aa77340d6c517b20eac18c1c4d544dc4b8a3b25994f26cdd"
+        "esp32p4_lte_cam.kicad_sch": "sha256:37d3ceee33e7bca6aa77340d6c517b20eac18c1c4d544dc4b8a3b25994f26cdd",
+        "esp32p4_lte_cam.kicad_pcb": "sha256:387ddb32d30b0f39599857941c228820f1d4b3e258dca661377b47837913f28a"
       },
       "outputs": {
-        "schematic": "schematic.json"
+        "schematic": "schematic.json",
+        "pcb": "pcb.json"
       },
       "scripts": {
         "schematic": "analyze_schematic.py esp32p4_lte_cam.kicad_sch"
       },
-      "generated": "2026-10-19T21:51:49-07:00",
+      "generated": "2026-10-19T22:27:31-07:00",
       "pinned": false
     }
   }

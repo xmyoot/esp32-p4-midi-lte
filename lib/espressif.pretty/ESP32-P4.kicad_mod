@@ -1033,4 +1033,9 @@
 		(uuid "4222b21e-8de0-4d35-a44a-0a1c99cad05d")
 	)
 	(embedded_fonts no)
+  (model "${KIPRJMOD}/lib/espressif.3dshapes/ESP32-P4_QFN-104.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

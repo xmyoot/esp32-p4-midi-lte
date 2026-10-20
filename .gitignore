@@ -16,3 +16,8 @@ __pycache__/
 fab/tmp/
 .easyeda_cache/
 scripts/__pycache__/
+analysis/*.kicad_pcb
+analysis/*.rpt
+analysis/*.net
+analysis/labels.json
+analysis/p4model/
